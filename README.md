@@ -39,6 +39,7 @@ Here, $P$ is the executable world program. It may be written by a coding agent, 
 
 ## Contents
 
+- [Taxonomy at a Glance](#taxonomy-at-a-glance)
 - [Programmatic Visual World Models](#programmatic-visual-world-models)
 - [Explicit-State Models and Generative Renderers](#explicit-state-models-and-generative-renderers)
 - [World Models as Executable Programs](#world-models-as-executable-programs)
@@ -63,6 +64,14 @@ Here, $P$ is the executable world program. It may be written by a coding agent, 
 - ![Transition][tag-transition] / ![Trace][tag-trace] / ![Outcome][tag-outcome] / ![Reward][tag-reward] — software-world prediction targets
 - ![Repository][tag-repo] / ![Terminal][tag-terminal] — repository-scale or command-line software environments
 - ![Open Code][tag-open-code] / ![Open Model][tag-open-model] — public implementation or weights are available
+
+## Taxonomy at a Glance
+
+The taxonomy separates the repository's primary focus—code as the executable representation of an external world—from software world models, where code is the world being modeled. Dashed branches show adjacent neural visual models and supporting benchmarks.
+
+<p align="center">
+  <img src="assets/code-world-model-taxonomy.svg" width="100%" alt="Taxonomy of Code World Models, including programmatic visual world models, executable program world models, explicit-state bridges, software world models, benchmarks, and adjacent neural visual models." />
+</p>
 
 ## Programmatic Visual World Models
 

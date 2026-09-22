@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="950" viewBox="0 0 1600 950" role="img" aria-labelledby="title desc">
+  <title id="title">Taxonomy of Code World Models</title>
+  <desc id="desc">A hierarchy separating programmatic external-world models, software-world models, benchmarks, and adjacent neural visual world models.</desc>
+  <defs>
+    <linearGradient id="header" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#172554"/>
+      <stop offset="100%" stop-color="#312e81"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow-navy" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#334155"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#059669"/>
+    </marker>
+    <marker id="arrow-pink" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#db2777"/>
+    </marker>
+    <style>
+      .title { font: 700 36px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 18px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #64748b; }
+      .root-title { font: 700 27px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #ffffff; }
+      .root-subtitle { font: 400 15px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #dbeafe; }
+      .branch-title { font: 700 22px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0f172a; }
+      .branch-subtitle { font: 500 15px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #475569; }
+      .card-title { font: 700 20px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .card-subtitle { font: 500 14px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #475569; }
+      .item { font: 500 15px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1e293b; }
+      .small { font: 500 13px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #64748b; }
+      .chip { font: 700 12px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0.08em; }
+      .connector { fill: none; stroke: #334155; stroke-width: 3; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="950" fill="#ffffff"/>
+
+  <text x="60" y="58" class="title">Taxonomy of Code World Models</text>
+  <text x="60" y="88" class="subtitle">Classified by what code represents, how world state evolves, and how observations are produced</text>
+
+  <!-- Root -->
+  <rect x="600" y="118" width="400" height="92" rx="20" fill="url(#header)" filter="url(#shadow)"/>
+  <text x="800" y="157" text-anchor="middle" class="root-title">CODE WORLD MODELS</text>
+  <text x="800" y="185" text-anchor="middle" class="root-subtitle">Executable representations, persistent state, and learned dynamics</text>
+
+  <!-- Root connectors -->
+  <path d="M800 210 V236 H550 V258" class="connector"/>
+  <path d="M800 210 V236 H1300 V258" class="connector"/>
+
+  <!-- Main branches -->
+  <rect x="100" y="258" width="900" height="100" rx="18" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="126" y="279" width="116" height="25" rx="12.5" fill="#7c3aed"/>
+  <text x="184" y="297" text-anchor="middle" class="chip" fill="#ffffff">PRIMARY</text>
+  <text x="126" y="330" class="branch-title">PROGRAMMATIC EXTERNAL WORLDS</text>
+  <text x="617" y="330" class="branch-subtitle">Code represents another world's entities, state, rules, and dynamics</text>
+
+  <rect x="1100" y="258" width="400" height="100" rx="18" fill="#f8fafc" stroke="#64748b" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="1126" y="279" width="132" height="25" rx="12.5" fill="#64748b"/>
+  <text x="1192" y="297" text-anchor="middle" class="chip" fill="#ffffff">SECONDARY</text>
+  <text x="1126" y="326" class="branch-title">SOFTWARE WORLDS</text>
+  <text x="1126" y="349" class="branch-subtitle">Code is the modeled world</text>
+
+  <!-- External-world branch connectors -->
+  <path d="M550 358 V406 H210 V438" class="connector"/>
+  <path d="M550 358 V406 H580 V438" class="connector"/>
+  <path d="M550 358 V406 H950 V438" class="connector"/>
+  <path d="M1300 358 V438" class="connector"/>
+
+  <!-- Programmatic visual card -->
+  <rect x="40" y="438" width="340" height="232" rx="18" fill="#faf5ff" stroke="#7c3aed" stroke-width="2.5" filter="url(#shadow)"/>
+  <circle cx="72" cy="474" r="17" fill="#7c3aed"/>
+  <text x="72" y="480" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#ffffff">1</text>
+  <text x="101" y="480" class="card-title" fill="#6d28d9">Programmatic Visual CWMs</text>
+  <text x="66" y="512" class="card-subtitle">Executable state + controls + neural rendering</text>
+  <line x1="66" y1="530" x2="354" y2="530" stroke="#ddd6fe"/>
+  <text x="66" y="557" class="item">- Programmable World Model</text>
+  <text x="66" y="584" class="item">- Code World Model: World Brain</text>
+  <text x="66" y="611" class="item">- Code as Worlds</text>
+  <text x="66" y="638" class="item">- VisPhyWorld</text>
+
+  <!-- Executable program card -->
+  <rect x="410" y="438" width="340" height="232" rx="18" fill="#fff7ed" stroke="#d97706" stroke-width="2.5" filter="url(#shadow)"/>
+  <circle cx="442" cy="474" r="17" fill="#d97706"/>
+  <text x="442" y="480" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#ffffff">2</text>
+  <text x="471" y="480" class="card-title" fill="#b45309">World Models as Programs</text>
+  <text x="436" y="512" class="card-subtitle">Induced or generated executable dynamics</text>
+  <line x1="436" y1="530" x2="724" y2="530" stroke="#fed7aa"/>
+  <text x="436" y="557" class="item">- WorldCoder | GIF-MCTS | FactorSim</text>
+  <text x="436" y="584" class="item">- PoE-World | POMDP Coder</text>
+  <text x="436" y="611" class="item">- PatchWorld | Mind-Studio</text>
+  <text x="436" y="638" class="item">- VisualPatchWorld | ARC-AGI-3</text>
+
+  <!-- Explicit-state bridge card -->
+  <rect x="780" y="438" width="340" height="232" rx="18" fill="#eff6ff" stroke="#2563eb" stroke-width="2.5" filter="url(#shadow)"/>
+  <circle cx="812" cy="474" r="17" fill="#2563eb"/>
+  <text x="812" y="480" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#ffffff">3</text>
+  <text x="841" y="480" class="card-title" fill="#1d4ed8">Explicit-State Bridges</text>
+  <text x="806" y="512" class="card-subtitle">Structured state + generative rendering</text>
+  <line x1="806" y1="530" x2="1094" y2="530" stroke="#bfdbfe"/>
+  <text x="806" y="557" class="item">- Magpie</text>
+  <text x="806" y="584" class="item">- Marionette</text>
+  <text x="806" y="611" class="item">- MASS</text>
+  <text x="806" y="638" class="item">- StatePlay</text>
+
+  <!-- Software-world card -->
+  <rect x="1160" y="438" width="400" height="360" rx="18" fill="#f8fafc" stroke="#64748b" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="1190" y="480" class="card-title" fill="#334155">Learned Software-Environment Models</text>
+  <text x="1190" y="510" class="card-subtitle">Predict execution, tools, repositories, and tests</text>
+  <line x1="1190" y1="530" x2="1530" y2="530" stroke="#cbd5e1"/>
+
+  <rect x="1190" y="550" width="340" height="61" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="1207" y="574" class="small">REPOSITORY &amp; TERMINAL</text>
+  <text x="1207" y="597" class="item">CWM | SWE-World | Qwen-AgentWorld | ECHO</text>
+
+  <rect x="1190" y="625" width="340" height="61" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="1207" y="649" class="small">PROGRAM EXECUTION</text>
+  <text x="1207" y="672" class="item">Neural Debugger | ExecVerify | CodeExecutor</text>
+
+  <rect x="1190" y="700" width="340" height="70" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="1207" y="724" class="small">EVALUATION &amp; BENCHMARKS</text>
+  <text x="1207" y="747" class="item">SURGE | CRUXEval | R-Eval | CoRE</text>
+
+  <!-- Context and benchmark cards -->
+  <rect x="40" y="742" width="500" height="150" rx="18" fill="#fdf2f8" stroke="#db2777" stroke-width="2.5" stroke-dasharray="10 8"/>
+  <rect x="64" y="760" width="140" height="24" rx="12" fill="#db2777"/>
+  <text x="134" y="777" text-anchor="middle" class="chip" fill="#ffffff">ADJACENT</text>
+  <text x="64" y="816" class="card-title" fill="#be185d">Neural Visual World Models</text>
+  <text x="64" y="844" class="card-subtitle">Action-conditioned pixels or latents; no executable canonical state</text>
+  <text x="64" y="873" class="item">Genie | GameNGen | DIAMOND | YUME</text>
+
+  <rect x="590" y="742" width="530" height="150" rx="18" fill="#ecfdf5" stroke="#059669" stroke-width="2.5"/>
+  <rect x="614" y="760" width="136" height="24" rx="12" fill="#059669"/>
+  <text x="682" y="777" text-anchor="middle" class="chip" fill="#ffffff">SUPPORT</text>
+  <text x="614" y="816" class="card-title" fill="#047857">Programmatic-World Benchmarks</text>
+  <text x="614" y="844" class="card-subtitle">State persistence, simulator fidelity, and executable-model quality</text>
+  <text x="614" y="873" class="item">CombatStateBench | VisPhyBench | CWMB | Text2World</text>
+
+  <!-- Relationship arrows -->
+  <path d="M540 812 H565 Q580 812 580 797 V694 Q580 680 580 670" fill="none" stroke="#059669" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#arrow-green)"/>
+  <path d="M290 742 V706 Q290 690 306 690 H930 Q950 690 950 670" fill="none" stroke="#db2777" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#arrow-pink)"/>
+
+  <!-- Legend -->
+  <line x1="60" y1="922" x2="100" y2="922" stroke="#334155" stroke-width="3"/>
+  <text x="112" y="927" class="small">core taxonomy</text>
+  <line x1="255" y1="922" x2="295" y2="922" stroke="#db2777" stroke-width="3" stroke-dasharray="7 5"/>
+  <text x="307" y="927" class="small">adjacent influence</text>
+  <line x1="475" y1="922" x2="515" y2="922" stroke="#059669" stroke-width="3" stroke-dasharray="7 5"/>
+  <text x="527" y="927" class="small">benchmark support</text>
+</svg>
