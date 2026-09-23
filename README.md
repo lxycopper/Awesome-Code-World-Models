@@ -76,57 +76,146 @@ The taxonomy separates the repository's primary focus—code as the executable r
 
 These works most directly match this repository's primary focus: executable programs maintain or reconstruct a world, and visual observations are produced through a rendering pipeline.
 
-- **Programmable World Model (PWM)** — *Programmable World Model*. arXiv 2026. A coding agent translates instructions into entity states and executable transition rules; a lightweight engine maintains persistent off-screen and non-visual state; state-augmented 3D oriented bounding boxes are compiled into controls for a pretrained video renderer. Introduces CombatStateBench. ![Code State][tag-code-state] ![Agent Written][tag-agent-written] ![Neural Renderer][tag-neural-renderer]
+- **Programmable World Model (PWM)** — *Programmable World Model*. arXiv 2026.
+  ![Code State][tag-code-state] ![Agent Written][tag-agent-written] ![Neural Renderer][tag-neural-renderer]
+
+  A coding agent translates instructions into entity states and executable transition rules; a lightweight engine maintains persistent off-screen and non-visual state; state-augmented 3D oriented bounding boxes are compiled into controls for a pretrained video renderer. Introduces CombatStateBench.
+
   [![arXiv][res-arxiv]](https://arxiv.org/abs/2609.10540) [![Website][res-website]](https://alaya-lab.github.io/pwm/) [![Repository][res-repo]](https://github.com/AlayaLab/pwm)
 
-- **Code World Model** — *Code World Model: Coding Agent as World Brain*. arXiv 2026. A coding agent continually creates and updates executable world state and rules, compiles them into proxy videos and structured prompts, and conditions MiniMax-H3 to render open-ended visual observations. ![Code State][tag-code-state] ![Agent Written][tag-agent-written] ![Neural Renderer][tag-neural-renderer]  [![arXiv][res-arxiv]](https://arxiv.org/abs/2608.25927) [![Website][res-website]](https://buaacyw.github.io/cwm/) [![Code][res-code]](https://github.com/buaacyw/code-world-model) [![Model][res-model]](https://huggingface.co/NTU-yiwen/awm-minimax-h3-new1344-lora-checkpoints)
+- **Code World Model** — *Code World Model: Coding Agent as World Brain*. arXiv 2026.
+  ![Code State][tag-code-state] ![Agent Written][tag-agent-written] ![Neural Renderer][tag-neural-renderer]
 
-- **Code as Worlds** — *Code as Worlds: Agentic Discovery of Executable World Representations for Physical Reasoning*. arXiv 2026. Represents physical composition, dynamics, and appearance as executable code, discovered through a propose–execute–render–verify loop from text or video evidence. ![Code State][tag-code-state] ![Agent Written][tag-agent-written] ![Induced][tag-induced]  [![arXiv][res-arxiv]](https://arxiv.org/abs/2608.27549) [![Website][res-website]](https://mirros-lab.github.io/code-as-world/) [![Code][res-code]](https://github.com/MirroS-Lab/Code-as-World)
+  A coding agent continually creates and updates executable world state and rules, compiles them into proxy videos and structured prompts, and conditions MiniMax-H3 to render open-ended visual observations.
 
-- **VisPhyWorld** — *VisPhyWorld: Probing Physical Reasoning via Code-Driven Video Reconstruction*. arXiv 2026. Requires multimodal models to infer executable 2D/3D physics simulation code from visual evidence and evaluates the re-rendered future, making the inferred dynamics inspectable and falsifiable. ![Code State][tag-code-state] ![Agent Written][tag-agent-written] ![Induced][tag-induced]  [![arXiv][res-arxiv]](https://arxiv.org/abs/2602.13294) [![Website][res-website]](https://tiger-ai-lab.github.io/VisPhyWorld/) [![Code][res-code]](https://github.com/TIGER-AI-Lab/VisPhyWorld)
+  [![arXiv][res-arxiv]](https://arxiv.org/abs/2608.25927) [![Website][res-website]](https://buaacyw.github.io/cwm/) [![Code][res-code]](https://github.com/buaacyw/code-world-model) [![Model][res-model]](https://huggingface.co/NTU-yiwen/awm-minimax-h3-new1344-lora-checkpoints)
 
-- **CoDeR** — *Code Plans, Diffusion Renders: Open-Ended Generative World Modeling*. arXiv 2026. Coordinates five complementary roles to translate high-level concepts into structured world rules, executable dynamics, and perceptual observations, enabling long-term memory, open-ended interactions, autonomous world evolution, and multi-agent scenarios. ![Code State][tag-code-state] ![Agent Written][tag-agent-written] ![Neural Renderer][tag-neural-renderer]
+- **Code as Worlds** — *Code as Worlds: Agentic Discovery of Executable World Representations for Physical Reasoning*. arXiv 2026.
+  ![Code State][tag-code-state] ![Agent Written][tag-agent-written] ![Induced][tag-induced]
+
+  Represents physical composition, dynamics, and appearance as executable code, discovered through a propose–execute–render–verify loop from text or video evidence.
+
+  [![arXiv][res-arxiv]](https://arxiv.org/abs/2608.27549) [![Website][res-website]](https://mirros-lab.github.io/code-as-world/) [![Code][res-code]](https://github.com/MirroS-Lab/Code-as-World)
+
+- **VisPhyWorld** — *VisPhyWorld: Probing Physical Reasoning via Code-Driven Video Reconstruction*. arXiv 2026.
+  ![Code State][tag-code-state] ![Agent Written][tag-agent-written] ![Induced][tag-induced]
+
+  Requires multimodal models to infer executable 2D/3D physics simulation code from visual evidence and evaluates the re-rendered future, making the inferred dynamics inspectable and falsifiable.
+
+  [![arXiv][res-arxiv]](https://arxiv.org/abs/2602.13294) [![Website][res-website]](https://tiger-ai-lab.github.io/VisPhyWorld/) [![Code][res-code]](https://github.com/TIGER-AI-Lab/VisPhyWorld)
+
+- **CoDeR** — *Code Plans, Diffusion Renders: Open-Ended Generative World Modeling*. arXiv 2026.
+  ![Code State][tag-code-state] ![Agent Written][tag-agent-written] ![Neural Renderer][tag-neural-renderer]
+
+  Coordinates five complementary roles to translate high-level concepts into structured world rules, executable dynamics, and perceptual observations, enabling long-term memory, open-ended interactions, autonomous world evolution, and multi-agent scenarios.
+
   [![arXiv][res-arxiv]](https://arxiv.org/abs/2609.26458)
 
 ## Explicit-State Models and Generative Renderers
 
 These systems share the key separation between authoritative state/dynamics and visual realization, but their state transitions are learned or conventionally authored rather than maintained as open-ended code by an agent.
 
-- **Magpie** — *Magpie: Real-Time World Renderer for Interactive Games*. arXiv 2026. A conventional game engine owns rules and state while a separate generative render server converts white-box frames into high-fidelity real-time video. ![Explicit State][tag-explicit-state] ![Neural Renderer][tag-neural-renderer]
+- **Magpie** — *Magpie: Real-Time World Renderer for Interactive Games*. arXiv 2026.
+  ![Explicit State][tag-explicit-state] ![Neural Renderer][tag-neural-renderer]
+
+  A conventional game engine owns rules and state while a separate generative render server converts white-box frames into high-fidelity real-time video.
+
   [![arXiv][res-arxiv]](https://arxiv.org/abs/2608.27168) [![Website][res-website]](https://zhanxy.xyz/Magpie-website) [![Data][res-data]](https://huggingface.co/datasets/MogoAI/Magpie_lite)
 
-- **Marionette** — *Marionette: Predicting World States, Rendering Geometry, Painting Appearance*. arXiv 2026. Predicts explicit articulated 3D state, deterministically converts it into pose-control video, and leaves only appearance synthesis to video diffusion; state-level rules can directly repair rollouts. ![Explicit State][tag-explicit-state] ![Neural Renderer][tag-neural-renderer]  [![arXiv][res-arxiv]](https://arxiv.org/abs/2608.14530) [![Website][res-website]](https://alayalab.github.io/Marionette/) [![Code][res-code]](https://github.com/AlayaLab/Marionette) [![Model][res-model]](https://huggingface.co/AlayaLab/Marionette)
+- **Marionette** — *Marionette: Predicting World States, Rendering Geometry, Painting Appearance*. arXiv 2026.
+  ![Explicit State][tag-explicit-state] ![Neural Renderer][tag-neural-renderer]
 
-- **MASS** — *MASS: Multiplayer World Models with Authoritative Shared State*. arXiv 2026. A learned logic engine advances a global typed state, while independent neural renderers produce consistent player-specific views. ![Explicit State][tag-explicit-state] ![Neural Renderer][tag-neural-renderer]
+  Predicts explicit articulated 3D state, deterministically converts it into pose-control video, and leaves only appearance synthesis to video diffusion; state-level rules can directly repair rollouts.
+
+  [![arXiv][res-arxiv]](https://arxiv.org/abs/2608.14530) [![Website][res-website]](https://alayalab.github.io/Marionette/) [![Code][res-code]](https://github.com/AlayaLab/Marionette) [![Model][res-model]](https://huggingface.co/AlayaLab/Marionette)
+
+- **MASS** — *MASS: Multiplayer World Models with Authoritative Shared State*. arXiv 2026.
+  ![Explicit State][tag-explicit-state] ![Neural Renderer][tag-neural-renderer]
+
+  A learned logic engine advances a global typed state, while independent neural renderers produce consistent player-specific views.
+
   [![arXiv][res-arxiv]](https://arxiv.org/abs/2608.06257) [![Website][res-website]](https://alaya-lab.github.io/MASS/)
 
-- **StatePlay** — *StatePlay: State-Aware Game World Models for Mechanics-Consistent Generation*. arXiv 2026. Jointly predicts explicit game variables and visual content so mechanics such as health, timers, and skill meters constrain generated gameplay. ![Explicit State][tag-explicit-state] ![Neural Renderer][tag-neural-renderer]  [![arXiv][res-arxiv]](https://arxiv.org/abs/2607.26754) [![Website][res-website]](https://jimntu.github.io/stateplay_page/) [![Code][res-code]](https://github.com/Jimntu/StatePlay) [![Model][res-model]](https://huggingface.co/onepiece1999/StatePlay)
+- **StatePlay** — *StatePlay: State-Aware Game World Models for Mechanics-Consistent Generation*. arXiv 2026.
+  ![Explicit State][tag-explicit-state] ![Neural Renderer][tag-neural-renderer]
+
+  Jointly predicts explicit game variables and visual content so mechanics such as health, timers, and skill meters constrain generated gameplay.
+
+  [![arXiv][res-arxiv]](https://arxiv.org/abs/2607.26754) [![Website][res-website]](https://jimntu.github.io/stateplay_page/) [![Code][res-code]](https://github.com/Jimntu/StatePlay) [![Model][res-model]](https://huggingface.co/onepiece1999/StatePlay)
 
 ## World Models as Executable Programs
 
 These works learn, synthesize, or repair executable transition models for planning and simulation, usually without a neural visual renderer.
 
-- **VisualPatchWorld** — *VisualPatchWorld: Code World Models as Latent Structured Representations for Planning*. arXiv 2026. Induces structured executable dynamics from visual trajectories for planning across navigation and continuous-control tasks. ![Induced][tag-induced]  [![arXiv][res-arxiv]](https://arxiv.org/abs/2607.25236) [![Code][res-code]](https://github.com/HKBU-KnowComp/VisualPatchWorld)
+- **VisualPatchWorld** — *VisualPatchWorld: Code World Models as Latent Structured Representations for Planning*. arXiv 2026.
+  ![Induced][tag-induced]
 
-- **Mind-Studio** — *Mind-Studio: Executable World Models with Lookahead Evaluation for Partially Observable Games*. arXiv 2026. Synthesizes standalone transition-and-render programs for partially observable Atari games and uses them for lookahead evaluation. ![Agent Written][tag-agent-written] ![Induced][tag-induced]  [![arXiv][res-arxiv]](https://arxiv.org/abs/2606.16070) [![Code][res-code]](https://github.com/HKBU-KnowComp/MindStudio)
+  Induces structured executable dynamics from visual trajectories for planning across navigation and continuous-control tasks.
 
-- **Executable World Models for ARC-AGI-3** — *Executable World Models for ARC-AGI-3 in the Era of Coding Agents*. arXiv 2026. A coding agent maintains, verifies, simplifies, and plans through persistent Python models of interactive games. ![Agent Written][tag-agent-written] ![Induced][tag-induced]  [![arXiv][res-arxiv]](https://arxiv.org/abs/2605.05138) [![Code][res-code]](https://github.com/astroseger/arc-3-agents-baseline1)
+  [![arXiv][res-arxiv]](https://arxiv.org/abs/2607.25236) [![Code][res-code]](https://github.com/HKBU-KnowComp/VisualPatchWorld)
 
-- **PatchWorld** — *PatchWorld: Gradient-Free Optimization of Executable World Models*. arXiv 2026. Induces persistent Python belief-state programs from offline trajectories through counterexample-guided repair. ![Induced][tag-induced]  [![arXiv][res-arxiv]](https://arxiv.org/abs/2605.30880) [![Code][res-code]](https://github.com/HKBU-KnowComp/PatchWorld)
+- **Mind-Studio** — *Mind-Studio: Executable World Models with Lookahead Evaluation for Partially Observable Games*. arXiv 2026.
+  ![Agent Written][tag-agent-written] ![Induced][tag-induced]
 
-- **Code World Models for General Game Playing** — ICLR 2026. Compiles natural-language game rules and demonstrations into executable Python functions for transitions, legal actions, observations, rewards, and termination, then plans with MCTS. ![Agent Written][tag-agent-written]
+  Synthesizes standalone transition-and-render programs for partially observable Atari games and uses them for lookahead evaluation.
+
+  [![arXiv][res-arxiv]](https://arxiv.org/abs/2606.16070) [![Code][res-code]](https://github.com/HKBU-KnowComp/MindStudio)
+
+- **Executable World Models for ARC-AGI-3** — *Executable World Models for ARC-AGI-3 in the Era of Coding Agents*. arXiv 2026.
+  ![Agent Written][tag-agent-written] ![Induced][tag-induced]
+
+  A coding agent maintains, verifies, simplifies, and plans through persistent Python models of interactive games.
+
+  [![arXiv][res-arxiv]](https://arxiv.org/abs/2605.05138) [![Code][res-code]](https://github.com/astroseger/arc-3-agents-baseline1)
+
+- **PatchWorld** — *PatchWorld: Gradient-Free Optimization of Executable World Models*. arXiv 2026.
+  ![Induced][tag-induced]
+
+  Induces persistent Python belief-state programs from offline trajectories through counterexample-guided repair.
+
+  [![arXiv][res-arxiv]](https://arxiv.org/abs/2605.30880) [![Code][res-code]](https://github.com/HKBU-KnowComp/PatchWorld)
+
+- **Code World Models for General Game Playing** — ICLR 2026.
+  ![Agent Written][tag-agent-written]
+
+  Compiles natural-language game rules and demonstrations into executable Python functions for transitions, legal actions, observations, rewards, and termination, then plans with MCTS.
+
   [![Paper][res-paper]](https://proceedings.iclr.cc/paper_files/paper/2026/hash/d8a12fde9e72444e1b356e8c37e53753-Abstract-Conference.html)
 
-- **PoE-World** — *PoE-World: Compositional World Modeling with Products of Programmatic Experts*. NeurIPS 2025 Spotlight. Learns stochastic, partially observable Atari dynamics as a weighted product of small LLM-synthesized Python programs. ![Agent Written][tag-agent-written] ![Induced][tag-induced]  [![Paper][res-paper]](https://proceedings.neurips.cc/paper_files/paper/2025/hash/262dd62fd1bbb30d6a6b4d578f5e65ff-Abstract-Conference.html) [![Website][res-website]](https://topwasu.github.io/poe-world) [![Code][res-code]](https://github.com/topwasu/poe-world)
+- **PoE-World** — *PoE-World: Compositional World Modeling with Products of Programmatic Experts*. NeurIPS 2025 Spotlight.
+  ![Agent Written][tag-agent-written] ![Induced][tag-induced]
 
-- **POMDP Coder** — *LLM-Guided Probabilistic Program Induction for POMDP Model Estimation*. 2025. Generates probabilistic programs for initial state, transition, observation, and reward functions under partial observability. ![Agent Written][tag-agent-written] ![Induced][tag-induced]
+  Learns stochastic, partially observable Atari dynamics as a weighted product of small LLM-synthesized Python programs.
+
+  [![Paper][res-paper]](https://proceedings.neurips.cc/paper_files/paper/2025/hash/262dd62fd1bbb30d6a6b4d578f5e65ff-Abstract-Conference.html) [![Website][res-website]](https://topwasu.github.io/poe-world) [![Code][res-code]](https://github.com/topwasu/poe-world)
+
+- **POMDP Coder** — *LLM-Guided Probabilistic Program Induction for POMDP Model Estimation*. 2025.
+  ![Agent Written][tag-agent-written] ![Induced][tag-induced]
+
+  Generates probabilistic programs for initial state, transition, observation, and reward functions under partial observability.
+
   [![arXiv][res-arxiv]](https://arxiv.org/abs/2505.02216)
 
-- **FactorSim** — *FactorSim: Generative Simulation via Factorized Representation*. NeurIPS 2024. Generates complete game and robotics simulations from language using a factorized POMDP representation. ![Agent Written][tag-agent-written]  [![Paper][res-paper]](https://proceedings.neurips.cc/paper_files/paper/2024/hash/9f35ec2f7f403ef2c83d65b581df10bc-Abstract-Conference.html) [![Website][res-website]](https://cs.stanford.edu/~sunfanyun/factorsim/) [![Code][res-code]](https://github.com/sunfanyunn/FactorSim)
+- **FactorSim** — *FactorSim: Generative Simulation via Factorized Representation*. NeurIPS 2024.
+  ![Agent Written][tag-agent-written]
 
-- **GIF-MCTS** — *Generating Code World Models with Large Language Models Guided by Monte Carlo Tree Search*. NeurIPS 2024. Searches over executable simulator programs using environment interaction and downstream policy performance, and introduces the Code World Models Benchmark (CWMB). ![Agent Written][tag-agent-written] ![Induced][tag-induced]  [![Paper][res-paper]](https://proceedings.neurips.cc/paper_files/paper/2024/hash/6f479ea488e0908ac8b1b37b27fd134c-Abstract-Conference.html) [![Website][res-website]](https://sites.google.com/view/code-world-models/home) [![Code][res-code]](https://github.com/nicoladainese96/code-world-models)
+  Generates complete game and robotics simulations from language using a factorized POMDP representation.
 
-- **WorldCoder** — *WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment*. NeurIPS 2024. Induces executable transition and reward programs from interaction, verifies them against experience, and plans inside the learned model. ![Agent Written][tag-agent-written] ![Induced][tag-induced]  [![Paper][res-paper]](https://proceedings.neurips.cc/paper_files/paper/2024/hash/820c61a0cd419163ccbd2c33b268816e-Abstract-Conference.html) [![Website][res-website]](https://haotang1995.github.io/projects/worldcoder) [![Code][res-code]](https://github.com/haotang1995/WorldCoder)
+  [![Paper][res-paper]](https://proceedings.neurips.cc/paper_files/paper/2024/hash/9f35ec2f7f403ef2c83d65b581df10bc-Abstract-Conference.html) [![Website][res-website]](https://cs.stanford.edu/~sunfanyun/factorsim/) [![Code][res-code]](https://github.com/sunfanyunn/FactorSim)
+
+- **GIF-MCTS** — *Generating Code World Models with Large Language Models Guided by Monte Carlo Tree Search*. NeurIPS 2024.
+  ![Agent Written][tag-agent-written] ![Induced][tag-induced]
+
+  Searches over executable simulator programs using environment interaction and downstream policy performance, and introduces the Code World Models Benchmark (CWMB).
+
+  [![Paper][res-paper]](https://proceedings.neurips.cc/paper_files/paper/2024/hash/6f479ea488e0908ac8b1b37b27fd134c-Abstract-Conference.html) [![Website][res-website]](https://sites.google.com/view/code-world-models/home) [![Code][res-code]](https://github.com/nicoladainese96/code-world-models)
+
+- **WorldCoder** — *WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment*. NeurIPS 2024.
+  ![Agent Written][tag-agent-written] ![Induced][tag-induced]
+
+  Induces executable transition and reward programs from interaction, verifies them against experience, and plans inside the learned model.
+
+  [![Paper][res-paper]](https://proceedings.neurips.cc/paper_files/paper/2024/hash/820c61a0cd419163ccbd2c33b268816e-Abstract-Conference.html) [![Website][res-website]](https://haotang1995.github.io/projects/worldcoder) [![Code][res-code]](https://github.com/haotang1995/WorldCoder)
 
 ## Programmatic-World Benchmarks
 
@@ -150,48 +239,104 @@ This second direction uses “Code World Model” to mean a learned model of **s
 
 ### Repository and Terminal World Models
 
-- **Qwen-AgentWorld** — *Qwen-AgentWorld: Language World Models for General Agents*. arXiv 2026. A native next-observation model trained across seven agent environments; its Terminal and SWE domains predict shell, file-system, edit, compiler, and test feedback. ![Transition][tag-transition] ![Repository][tag-repo] ![Terminal][tag-terminal]  [![arXiv][res-arxiv]](https://arxiv.org/abs/2606.24597) [![Code][res-code]](https://github.com/QwenLM/Qwen-AgentWorld) [![Model][res-model]](https://huggingface.co/Qwen/Qwen-AgentWorld-35B-A3B) [![Benchmark][res-benchmark]](https://huggingface.co/datasets/Qwen/AgentWorldBench)
+- **Qwen-AgentWorld** — *Qwen-AgentWorld: Language World Models for General Agents*. arXiv 2026.
+  ![Transition][tag-transition] ![Repository][tag-repo] ![Terminal][tag-terminal]
 
-- **ECHO** — *ECHO: Terminal Agents Learn World Models for Free*. arXiv 2026. Adds an environment-observation prediction objective to terminal-agent RL, learning command effects from stdout, errors, files, logs, and traces already present in rollouts. ![Transition][tag-transition] ![Terminal][tag-terminal]
+  A native next-observation model trained across seven agent environments; its Terminal and SWE domains predict shell, file-system, edit, compiler, and test feedback.
+
+  [![arXiv][res-arxiv]](https://arxiv.org/abs/2606.24597) [![Code][res-code]](https://github.com/QwenLM/Qwen-AgentWorld) [![Model][res-model]](https://huggingface.co/Qwen/Qwen-AgentWorld-35B-A3B) [![Benchmark][res-benchmark]](https://huggingface.co/datasets/Qwen/AgentWorldBench)
+
+- **ECHO** — *ECHO: Terminal Agents Learn World Models for Free*. arXiv 2026.
+  ![Transition][tag-transition] ![Terminal][tag-terminal]
+
+  Adds an environment-observation prediction objective to terminal-agent RL, learning command effects from stdout, errors, files, logs, and traces already present in rollouts.
+
   [![arXiv][res-arxiv]](https://arxiv.org/abs/2605.24517)
 
-- **SWE-World** — *SWE-World: Building Software Engineering Agents in Docker-Free Environments*. arXiv 2026. Replaces physical repository execution with learned transition and reward models that simulate command outcomes and final test feedback. ![Transition][tag-transition] ![Reward][tag-reward] ![Repository][tag-repo]
+- **SWE-World** — *SWE-World: Building Software Engineering Agents in Docker-Free Environments*. arXiv 2026.
+  ![Transition][tag-transition] ![Reward][tag-reward] ![Repository][tag-repo]
+
+  Replaces physical repository execution with learned transition and reward models that simulate command outcomes and final test feedback.
+
   [![arXiv][res-arxiv]](https://arxiv.org/abs/2602.03419) [![Code][res-code]](https://github.com/RUCAIBox/SWE-World)
 
-- **CWM** — *CWM: An Open-Weights LLM for Research on Code Generation with World Models*. arXiv 2025. A 32B model mid-trained on Python execution traces and agent interactions in containerized software environments. ![Transition][tag-transition] ![Trace][tag-trace] ![Repository][tag-repo]  [![arXiv][res-arxiv]](https://arxiv.org/abs/2510.02387) [![Website][res-website]](https://ai.meta.com/research/publications/cwm-an-open-weights-llm-for-research-on-code-generation-with-world-models/) [![Code][res-code]](https://github.com/facebookresearch/cwm) [![Model][res-model]](https://huggingface.co/facebook/cwm)
+- **CWM** — *CWM: An Open-Weights LLM for Research on Code Generation with World Models*. arXiv 2025.
+  ![Transition][tag-transition] ![Trace][tag-trace] ![Repository][tag-repo]
+
+  A 32B model mid-trained on Python execution traces and agent interactions in containerized software environments.
+
+  [![arXiv][res-arxiv]](https://arxiv.org/abs/2510.02387) [![Website][res-website]](https://ai.meta.com/research/publications/cwm-an-open-weights-llm-for-research-on-code-generation-with-world-models/) [![Code][res-code]](https://github.com/facebookresearch/cwm) [![Model][res-model]](https://huggingface.co/facebook/cwm)
 
 ### Program Execution and State Models
 
-- **Neural Debugger** — *Towards a Neural Debugger for Python*. arXiv 2026. Models forward and inverse Python execution conditioned on debugger actions such as step-into, step-over, step-return, and breakpoints. ![Transition][tag-transition] ![Trace][tag-trace] ![Outcome][tag-outcome]
+- **Neural Debugger** — *Towards a Neural Debugger for Python*. arXiv 2026.
+  ![Transition][tag-transition] ![Trace][tag-trace] ![Outcome][tag-outcome]
+
+  Models forward and inverse Python execution conditioned on debugger actions such as step-into, step-over, step-return, and breakpoints.
+
   [![arXiv][res-arxiv]](https://arxiv.org/abs/2603.09951)
 
-- **Self-Execution Simulation** — *Self-Execution Simulation Improves Coding Models*. arXiv 2026. Trains step-by-step execution simulation with supervised traces and verifiable RL, then uses predicted test outcomes for self-verification and repair. ![Trace][tag-trace] ![Outcome][tag-outcome]
+- **Self-Execution Simulation** — *Self-Execution Simulation Improves Coding Models*. arXiv 2026.
+  ![Trace][tag-trace] ![Outcome][tag-outcome]
+
+  Trains step-by-step execution simulation with supervised traces and verifiable RL, then uses predicted test outcomes for self-verification and repair.
+
   [![arXiv][res-arxiv]](https://arxiv.org/abs/2604.03253)
 
-- **ExecVerify** — *ExecVerify: White-Box RL with Verifiable Stepwise Rewards for Code Execution Reasoning*. ACL 2026. Rewards correct next-statement, variable-value, variable-type, and final-output predictions before transferring the capability to code generation. ![Trace][tag-trace] ![Outcome][tag-outcome]
+- **ExecVerify** — *ExecVerify: White-Box RL with Verifiable Stepwise Rewards for Code Execution Reasoning*. ACL 2026.
+  ![Trace][tag-trace] ![Outcome][tag-outcome]
+
+  Rewards correct next-statement, variable-value, variable-type, and final-output predictions before transferring the capability to code generation.
+
   [![Paper][res-paper]](https://aclanthology.org/2026.acl-long.631/) [![Artifacts][res-artifacts]](https://github.com/tlx000000001/ExecVerify)
 
-- **Execution Tuning** — *What I Cannot Execute, I Do Not Understand: Training and Evaluating LLMs on Program Execution Traces*. arXiv 2025. Trains line- and instruction-level execution models and studies compact and dynamic state representations for long rollouts. ![Trace][tag-trace] ![Outcome][tag-outcome]
+- **Execution Tuning** — *What I Cannot Execute, I Do Not Understand: Training and Evaluating LLMs on Program Execution Traces*. arXiv 2025.
+  ![Trace][tag-trace] ![Outcome][tag-outcome]
+
+  Trains line- and instruction-level execution models and studies compact and dynamic state representations for long rollouts.
+
   [![arXiv][res-arxiv]](https://arxiv.org/abs/2503.05703)
 
-- **SemCoder** — *SemCoder: Training Code Language Models with Comprehensive Semantics Reasoning*. NeurIPS 2024. Learns execution-aware semantic traces and execution monologues for generation and repair. ![Trace][tag-trace] ![Outcome][tag-outcome]
+- **SemCoder** — *SemCoder: Training Code Language Models with Comprehensive Semantics Reasoning*. NeurIPS 2024.
+  ![Trace][tag-trace] ![Outcome][tag-outcome]
+
+  Learns execution-aware semantic traces and execution monologues for generation and repair.
+
   [![Paper][res-paper]](https://proceedings.neurips.cc/paper_files/paper/2024/hash/6efcc7fd8efeee29a050a79c843c90e0-Abstract-Conference.html) [![Artifacts][res-artifacts]](https://github.com/ARiSE-Lab/SemCoder)
 
-- **TRACED** — *TRACED: Execution-Aware Pre-training for Source Code*. ICSE 2024. Predicts execution coverage and quantized runtime variable states from source code and inputs. ![Trace][tag-trace] ![Outcome][tag-outcome]
+- **TRACED** — *TRACED: Execution-Aware Pre-training for Source Code*. ICSE 2024.
+  ![Trace][tag-trace] ![Outcome][tag-outcome]
+
+  Predicts execution coverage and quantized runtime variable states from source code and inputs.
+
   [![arXiv][res-arxiv]](https://arxiv.org/abs/2306.07487) [![Code][res-code]](https://github.com/ARiSE-Lab/TRACED_ICSE_24)
 
-- **CodeExecutor** — *Code Execution with Pre-trained Language Models*. Findings of ACL 2023. A learned Python executor that predicts line-by-line traces and final outputs, with execution pre-training transferred to code intelligence tasks. ![Trace][tag-trace] ![Outcome][tag-outcome]
+- **CodeExecutor** — *Code Execution with Pre-trained Language Models*. Findings of ACL 2023.
+  ![Trace][tag-trace] ![Outcome][tag-outcome]
+
+  A learned Python executor that predicts line-by-line traces and final outputs, with execution pre-training transferred to code intelligence tasks.
+
   [![Paper][res-paper]](https://aclanthology.org/2023.findings-acl.308/) [![Code and Data][res-code-data]](https://github.com/microsoft/CodeBERT/tree/master/CodeExecutor)
 
-- **Learning to Execute** — *Learning to Execute*. arXiv 2014. A foundational study training recurrent networks to predict program outputs directly from source code and inputs. ![Outcome][tag-outcome]
+- **Learning to Execute** — *Learning to Execute*. arXiv 2014.
+  ![Outcome][tag-outcome]
+
+  A foundational study training recurrent networks to predict program outputs directly from source code and inputs.
+
   [![arXiv][res-arxiv]](https://arxiv.org/abs/1410.4615) [![Code][res-code]](https://github.com/wojciechz/learning_to_execute)
 
 ### Software-World Evaluation and Analysis
 
-- **Towards Evaluation of Implicit Software World Models in Coding LLMs** — DL4Code at ICML 2026. Evaluates test outcomes, exceptions, memory, runtime, and profiler predictions on library-level cases derived from SWE-bench Verified.
+- **Towards Evaluation of Implicit Software World Models in Coding LLMs** — DL4Code at ICML 2026.
+
+  Evaluates test outcomes, exceptions, memory, runtime, and profiler predictions on library-level cases derived from SWE-bench Verified.
+
   [![arXiv][res-arxiv]](https://arxiv.org/abs/2606.27406) [![Code][res-code]](https://github.com/JetBrains-Research/cwm-execution-tracer) [![Data][res-data]](https://huggingface.co/datasets/JetBrains-Research/cwm-benchmarks-dl4c-benchmark)
 
-- **Debugging Code World Models** — 2026. Separates action-generation failures from state-propagation failures in long execution rollouts and analyzes the effect of dense state supervision.
+- **Debugging Code World Models** — 2026.
+
+  Separates action-generation failures from state-propagation failures in long execution rollouts and analyzes the effect of dense state supervision.
+
   [![arXiv][res-arxiv]](https://arxiv.org/abs/2602.07672) [![Blog][res-blog]](https://babak70.github.io/code-world-models-blog/)
 
 ### Software-World Benchmarks
