@@ -63,7 +63,6 @@ Here, $P$ is the executable world program. It may be written by a coding agent, 
 - ![Software World][tag-software-world] — predicts the behavior of programs or software environments
 - ![Transition][tag-transition] / ![Trace][tag-trace] / ![Outcome][tag-outcome] / ![Reward][tag-reward] — software-world prediction targets
 - ![Repository][tag-repo] / ![Terminal][tag-terminal] — repository-scale or command-line software environments
-- ![Open Code][tag-open-code] / ![Open Model][tag-open-model] — public implementation or weights are available
 
 ## Taxonomy at a Glance
 
@@ -77,17 +76,17 @@ The taxonomy separates the repository's primary focus—code as the executable r
 
 These works most directly match this repository's primary focus: executable programs maintain or reconstruct a world, and visual observations are produced through a rendering pipeline.
 
-- **Programmable World Model (PWM)** — *Programmable World Model*. arXiv 2026. A coding agent translates instructions into entity states and executable transition rules; a lightweight engine maintains persistent off-screen and non-visual state; state-augmented 3D oriented bounding boxes are compiled into controls for a pretrained video renderer. Introduces CombatStateBench. ![Code State][tag-code-state] ![Agent Written][tag-agent-written] ![Neural Renderer][tag-neural-renderer] ![Open Code][tag-open-code]
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2609.10540) [![Website][res-website]](https://alaya-lab.github.io/pwm/) [![Code][res-code]](https://github.com/AlayaLab/pwm)
+- **Programmable World Model (PWM)** — *Programmable World Model*. arXiv 2026. A coding agent translates instructions into entity states and executable transition rules; a lightweight engine maintains persistent off-screen and non-visual state; state-augmented 3D oriented bounding boxes are compiled into controls for a pretrained video renderer. Introduces CombatStateBench. ![Code State][tag-code-state] ![Agent Written][tag-agent-written] ![Neural Renderer][tag-neural-renderer]
+  [![arXiv][res-arxiv]](https://arxiv.org/abs/2609.10540) [![Website][res-website]](https://alaya-lab.github.io/pwm/) [![Repository][res-repo]](https://github.com/AlayaLab/pwm)
 
-- **Code World Model** — *Code World Model: Coding Agent as World Brain*. arXiv 2026. A coding agent continually creates and updates executable world state and rules, compiles them into proxy videos and structured prompts, and conditions MiniMax-H3 to render open-ended visual observations. ![Code State][tag-code-state] ![Agent Written][tag-agent-written] ![Neural Renderer][tag-neural-renderer] ![Open Code][tag-open-code]
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2608.25927) [![Website][res-website]](https://buaacyw.github.io/cwm/) [![Code][res-code]](https://github.com/buaacyw/code-world-model) [![Model][res-model]](https://huggingface.co/NTU-yiwen/awm-minimax-h3-new1344-lora-checkpoints)
+- **Code World Model** — *Code World Model: Coding Agent as World Brain*. arXiv 2026. A coding agent continually creates and updates executable world state and rules, compiles them into proxy videos and structured prompts, and conditions MiniMax-H3 to render open-ended visual observations. ![Code State][tag-code-state] ![Agent Written][tag-agent-written] ![Neural Renderer][tag-neural-renderer]  [![arXiv][res-arxiv]](https://arxiv.org/abs/2608.25927) [![Website][res-website]](https://buaacyw.github.io/cwm/) [![Code][res-code]](https://github.com/buaacyw/code-world-model) [![Model][res-model]](https://huggingface.co/NTU-yiwen/awm-minimax-h3-new1344-lora-checkpoints)
 
-- **Code as Worlds** — *Code as Worlds: Agentic Discovery of Executable World Representations for Physical Reasoning*. arXiv 2026. Represents physical composition, dynamics, and appearance as executable code, discovered through a propose–execute–render–verify loop from text or video evidence. ![Code State][tag-code-state] ![Agent Written][tag-agent-written] ![Induced][tag-induced] ![Open Code][tag-open-code]
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2608.27549) [![Website][res-website]](https://mirros-lab.github.io/code-as-world/) [![Code][res-code]](https://github.com/MirroS-Lab/Code-as-World)
+- **Code as Worlds** — *Code as Worlds: Agentic Discovery of Executable World Representations for Physical Reasoning*. arXiv 2026. Represents physical composition, dynamics, and appearance as executable code, discovered through a propose–execute–render–verify loop from text or video evidence. ![Code State][tag-code-state] ![Agent Written][tag-agent-written] ![Induced][tag-induced]  [![arXiv][res-arxiv]](https://arxiv.org/abs/2608.27549) [![Website][res-website]](https://mirros-lab.github.io/code-as-world/) [![Code][res-code]](https://github.com/MirroS-Lab/Code-as-World)
 
-- **VisPhyWorld** — *VisPhyWorld: Probing Physical Reasoning via Code-Driven Video Reconstruction*. arXiv 2026. Requires multimodal models to infer executable 2D/3D physics simulation code from visual evidence and evaluates the re-rendered future, making the inferred dynamics inspectable and falsifiable. ![Code State][tag-code-state] ![Agent Written][tag-agent-written] ![Induced][tag-induced] ![Open Code][tag-open-code]
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2602.13294) [![Website][res-website]](https://tiger-ai-lab.github.io/VisPhyWorld/) [![Code][res-code]](https://github.com/TIGER-AI-Lab/VisPhyWorld)
+- **VisPhyWorld** — *VisPhyWorld: Probing Physical Reasoning via Code-Driven Video Reconstruction*. arXiv 2026. Requires multimodal models to infer executable 2D/3D physics simulation code from visual evidence and evaluates the re-rendered future, making the inferred dynamics inspectable and falsifiable. ![Code State][tag-code-state] ![Agent Written][tag-agent-written] ![Induced][tag-induced]  [![arXiv][res-arxiv]](https://arxiv.org/abs/2602.13294) [![Website][res-website]](https://tiger-ai-lab.github.io/VisPhyWorld/) [![Code][res-code]](https://github.com/TIGER-AI-Lab/VisPhyWorld)
+
+- **CoDeR** — *Code Plans, Diffusion Renders: Open-Ended Generative World Modeling*. arXiv 2026. Coordinates five complementary roles to translate high-level concepts into structured world rules, executable dynamics, and perceptual observations, enabling long-term memory, open-ended interactions, autonomous world evolution, and multi-agent scenarios. ![Code State][tag-code-state] ![Agent Written][tag-agent-written] ![Neural Renderer][tag-neural-renderer]
+  [![arXiv][res-arxiv]](https://arxiv.org/abs/2609.26458)
 
 ## Explicit-State Models and Generative Renderers
 
@@ -96,52 +95,42 @@ These systems share the key separation between authoritative state/dynamics and 
 - **Magpie** — *Magpie: Real-Time World Renderer for Interactive Games*. arXiv 2026. A conventional game engine owns rules and state while a separate generative render server converts white-box frames into high-fidelity real-time video. ![Explicit State][tag-explicit-state] ![Neural Renderer][tag-neural-renderer]
   [![arXiv][res-arxiv]](https://arxiv.org/abs/2608.27168) [![Website][res-website]](https://zhanxy.xyz/Magpie-website) [![Data][res-data]](https://huggingface.co/datasets/MogoAI/Magpie_lite)
 
-- **Marionette** — *Marionette: Predicting World States, Rendering Geometry, Painting Appearance*. arXiv 2026. Predicts explicit articulated 3D state, deterministically converts it into pose-control video, and leaves only appearance synthesis to video diffusion; state-level rules can directly repair rollouts. ![Explicit State][tag-explicit-state] ![Neural Renderer][tag-neural-renderer] ![Open Code][tag-open-code] ![Open Model][tag-open-model]
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2608.14530) [![Website][res-website]](https://alayalab.github.io/Marionette/) [![Code][res-code]](https://github.com/AlayaLab/Marionette) [![Model][res-model]](https://huggingface.co/AlayaLab/Marionette)
+- **Marionette** — *Marionette: Predicting World States, Rendering Geometry, Painting Appearance*. arXiv 2026. Predicts explicit articulated 3D state, deterministically converts it into pose-control video, and leaves only appearance synthesis to video diffusion; state-level rules can directly repair rollouts. ![Explicit State][tag-explicit-state] ![Neural Renderer][tag-neural-renderer]  [![arXiv][res-arxiv]](https://arxiv.org/abs/2608.14530) [![Website][res-website]](https://alayalab.github.io/Marionette/) [![Code][res-code]](https://github.com/AlayaLab/Marionette) [![Model][res-model]](https://huggingface.co/AlayaLab/Marionette)
 
 - **MASS** — *MASS: Multiplayer World Models with Authoritative Shared State*. arXiv 2026. A learned logic engine advances a global typed state, while independent neural renderers produce consistent player-specific views. ![Explicit State][tag-explicit-state] ![Neural Renderer][tag-neural-renderer]
   [![arXiv][res-arxiv]](https://arxiv.org/abs/2608.06257) [![Website][res-website]](https://alaya-lab.github.io/MASS/)
 
-- **StatePlay** — *StatePlay: State-Aware Game World Models for Mechanics-Consistent Generation*. arXiv 2026. Jointly predicts explicit game variables and visual content so mechanics such as health, timers, and skill meters constrain generated gameplay. ![Explicit State][tag-explicit-state] ![Neural Renderer][tag-neural-renderer] ![Open Code][tag-open-code] ![Open Model][tag-open-model]
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2607.26754) [![Website][res-website]](https://jimntu.github.io/stateplay_page/) [![Code][res-code]](https://github.com/Jimntu/StatePlay) [![Model][res-model]](https://huggingface.co/onepiece1999/StatePlay)
+- **StatePlay** — *StatePlay: State-Aware Game World Models for Mechanics-Consistent Generation*. arXiv 2026. Jointly predicts explicit game variables and visual content so mechanics such as health, timers, and skill meters constrain generated gameplay. ![Explicit State][tag-explicit-state] ![Neural Renderer][tag-neural-renderer]  [![arXiv][res-arxiv]](https://arxiv.org/abs/2607.26754) [![Website][res-website]](https://jimntu.github.io/stateplay_page/) [![Code][res-code]](https://github.com/Jimntu/StatePlay) [![Model][res-model]](https://huggingface.co/onepiece1999/StatePlay)
 
 ## World Models as Executable Programs
 
 These works learn, synthesize, or repair executable transition models for planning and simulation, usually without a neural visual renderer.
 
-- **VisualPatchWorld** — *VisualPatchWorld: Code World Models as Latent Structured Representations for Planning*. arXiv 2026. Induces structured executable dynamics from visual trajectories for planning across navigation and continuous-control tasks. ![Induced][tag-induced] ![Open Code][tag-open-code]
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2607.25236) [![Code][res-code]](https://github.com/HKBU-KnowComp/VisualPatchWorld)
+- **VisualPatchWorld** — *VisualPatchWorld: Code World Models as Latent Structured Representations for Planning*. arXiv 2026. Induces structured executable dynamics from visual trajectories for planning across navigation and continuous-control tasks. ![Induced][tag-induced]  [![arXiv][res-arxiv]](https://arxiv.org/abs/2607.25236) [![Code][res-code]](https://github.com/HKBU-KnowComp/VisualPatchWorld)
 
-- **Mind-Studio** — *Mind-Studio: Executable World Models with Lookahead Evaluation for Partially Observable Games*. arXiv 2026. Synthesizes standalone transition-and-render programs for partially observable Atari games and uses them for lookahead evaluation. ![Agent Written][tag-agent-written] ![Induced][tag-induced] ![Open Code][tag-open-code]
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2606.16070) [![Code][res-code]](https://github.com/HKBU-KnowComp/MindStudio)
+- **Mind-Studio** — *Mind-Studio: Executable World Models with Lookahead Evaluation for Partially Observable Games*. arXiv 2026. Synthesizes standalone transition-and-render programs for partially observable Atari games and uses them for lookahead evaluation. ![Agent Written][tag-agent-written] ![Induced][tag-induced]  [![arXiv][res-arxiv]](https://arxiv.org/abs/2606.16070) [![Code][res-code]](https://github.com/HKBU-KnowComp/MindStudio)
 
-- **Executable World Models for ARC-AGI-3** — *Executable World Models for ARC-AGI-3 in the Era of Coding Agents*. arXiv 2026. A coding agent maintains, verifies, simplifies, and plans through persistent Python models of interactive games. ![Agent Written][tag-agent-written] ![Induced][tag-induced] ![Open Code][tag-open-code]
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2605.05138) [![Code][res-code]](https://github.com/astroseger/arc-3-agents-baseline1)
+- **Executable World Models for ARC-AGI-3** — *Executable World Models for ARC-AGI-3 in the Era of Coding Agents*. arXiv 2026. A coding agent maintains, verifies, simplifies, and plans through persistent Python models of interactive games. ![Agent Written][tag-agent-written] ![Induced][tag-induced]  [![arXiv][res-arxiv]](https://arxiv.org/abs/2605.05138) [![Code][res-code]](https://github.com/astroseger/arc-3-agents-baseline1)
 
-- **PatchWorld** — *PatchWorld: Gradient-Free Optimization of Executable World Models*. arXiv 2026. Induces persistent Python belief-state programs from offline trajectories through counterexample-guided repair. ![Induced][tag-induced] ![Open Code][tag-open-code]
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2605.30880) [![Code][res-code]](https://github.com/HKBU-KnowComp/PatchWorld)
+- **PatchWorld** — *PatchWorld: Gradient-Free Optimization of Executable World Models*. arXiv 2026. Induces persistent Python belief-state programs from offline trajectories through counterexample-guided repair. ![Induced][tag-induced]  [![arXiv][res-arxiv]](https://arxiv.org/abs/2605.30880) [![Code][res-code]](https://github.com/HKBU-KnowComp/PatchWorld)
 
 - **Code World Models for General Game Playing** — ICLR 2026. Compiles natural-language game rules and demonstrations into executable Python functions for transitions, legal actions, observations, rewards, and termination, then plans with MCTS. ![Agent Written][tag-agent-written]
   [![Paper][res-paper]](https://proceedings.iclr.cc/paper_files/paper/2026/hash/d8a12fde9e72444e1b356e8c37e53753-Abstract-Conference.html)
 
-- **PoE-World** — *PoE-World: Compositional World Modeling with Products of Programmatic Experts*. NeurIPS 2025 Spotlight. Learns stochastic, partially observable Atari dynamics as a weighted product of small LLM-synthesized Python programs. ![Agent Written][tag-agent-written] ![Induced][tag-induced] ![Open Code][tag-open-code]
-  [![Paper][res-paper]](https://proceedings.neurips.cc/paper_files/paper/2025/hash/262dd62fd1bbb30d6a6b4d578f5e65ff-Abstract-Conference.html) [![Website][res-website]](https://topwasu.github.io/poe-world) [![Code][res-code]](https://github.com/topwasu/poe-world)
+- **PoE-World** — *PoE-World: Compositional World Modeling with Products of Programmatic Experts*. NeurIPS 2025 Spotlight. Learns stochastic, partially observable Atari dynamics as a weighted product of small LLM-synthesized Python programs. ![Agent Written][tag-agent-written] ![Induced][tag-induced]  [![Paper][res-paper]](https://proceedings.neurips.cc/paper_files/paper/2025/hash/262dd62fd1bbb30d6a6b4d578f5e65ff-Abstract-Conference.html) [![Website][res-website]](https://topwasu.github.io/poe-world) [![Code][res-code]](https://github.com/topwasu/poe-world)
 
 - **POMDP Coder** — *LLM-Guided Probabilistic Program Induction for POMDP Model Estimation*. 2025. Generates probabilistic programs for initial state, transition, observation, and reward functions under partial observability. ![Agent Written][tag-agent-written] ![Induced][tag-induced]
   [![arXiv][res-arxiv]](https://arxiv.org/abs/2505.02216)
 
-- **FactorSim** — *FactorSim: Generative Simulation via Factorized Representation*. NeurIPS 2024. Generates complete game and robotics simulations from language using a factorized POMDP representation. ![Agent Written][tag-agent-written] ![Open Code][tag-open-code]
-  [![Paper][res-paper]](https://proceedings.neurips.cc/paper_files/paper/2024/hash/9f35ec2f7f403ef2c83d65b581df10bc-Abstract-Conference.html) [![Website][res-website]](https://cs.stanford.edu/~sunfanyun/factorsim/) [![Code][res-code]](https://github.com/sunfanyunn/FactorSim)
+- **FactorSim** — *FactorSim: Generative Simulation via Factorized Representation*. NeurIPS 2024. Generates complete game and robotics simulations from language using a factorized POMDP representation. ![Agent Written][tag-agent-written]  [![Paper][res-paper]](https://proceedings.neurips.cc/paper_files/paper/2024/hash/9f35ec2f7f403ef2c83d65b581df10bc-Abstract-Conference.html) [![Website][res-website]](https://cs.stanford.edu/~sunfanyun/factorsim/) [![Code][res-code]](https://github.com/sunfanyunn/FactorSim)
 
-- **GIF-MCTS** — *Generating Code World Models with Large Language Models Guided by Monte Carlo Tree Search*. NeurIPS 2024. Searches over executable simulator programs using environment interaction and downstream policy performance, and introduces the Code World Models Benchmark (CWMB). ![Agent Written][tag-agent-written] ![Induced][tag-induced] ![Open Code][tag-open-code]
-  [![Paper][res-paper]](https://proceedings.neurips.cc/paper_files/paper/2024/hash/6f479ea488e0908ac8b1b37b27fd134c-Abstract-Conference.html) [![Website][res-website]](https://sites.google.com/view/code-world-models/home) [![Code][res-code]](https://github.com/nicoladainese96/code-world-models)
+- **GIF-MCTS** — *Generating Code World Models with Large Language Models Guided by Monte Carlo Tree Search*. NeurIPS 2024. Searches over executable simulator programs using environment interaction and downstream policy performance, and introduces the Code World Models Benchmark (CWMB). ![Agent Written][tag-agent-written] ![Induced][tag-induced]  [![Paper][res-paper]](https://proceedings.neurips.cc/paper_files/paper/2024/hash/6f479ea488e0908ac8b1b37b27fd134c-Abstract-Conference.html) [![Website][res-website]](https://sites.google.com/view/code-world-models/home) [![Code][res-code]](https://github.com/nicoladainese96/code-world-models)
 
-- **WorldCoder** — *WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment*. NeurIPS 2024. Induces executable transition and reward programs from interaction, verifies them against experience, and plans inside the learned model. ![Agent Written][tag-agent-written] ![Induced][tag-induced] ![Open Code][tag-open-code]
-  [![Paper][res-paper]](https://proceedings.neurips.cc/paper_files/paper/2024/hash/820c61a0cd419163ccbd2c33b268816e-Abstract-Conference.html) [![Website][res-website]](https://haotang1995.github.io/projects/worldcoder) [![Code][res-code]](https://github.com/haotang1995/WorldCoder)
+- **WorldCoder** — *WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment*. NeurIPS 2024. Induces executable transition and reward programs from interaction, verifies them against experience, and plans inside the learned model. ![Agent Written][tag-agent-written] ![Induced][tag-induced]  [![Paper][res-paper]](https://proceedings.neurips.cc/paper_files/paper/2024/hash/820c61a0cd419163ccbd2c33b268816e-Abstract-Conference.html) [![Website][res-website]](https://haotang1995.github.io/projects/worldcoder) [![Code][res-code]](https://github.com/haotang1995/WorldCoder)
 
 ## Programmatic-World Benchmarks
 
-- **CombatStateBench** — Long-horizon entity count and persistent-state evaluation with moving cameras, off-screen entities, and irreversible events. [![arXiv][res-arxiv]](https://arxiv.org/abs/2609.10540) [![Code and Data][res-code-data]](https://github.com/AlayaLab/pwm)
+- **CombatStateBench** — Long-horizon entity count and persistent-state evaluation with moving cameras, off-screen entities, and irreversible events. [![arXiv][res-arxiv]](https://arxiv.org/abs/2609.10540) [![Website][res-website]](https://alaya-lab.github.io/pwm/)
 - **VisPhyBench** — 209 scenes from 108 physical templates for evaluating code-driven physical reconstruction and re-simulation. [![arXiv][res-arxiv]](https://arxiv.org/abs/2602.13294) [![Code and Data][res-code-data]](https://github.com/TIGER-AI-Lab/VisPhyWorld)
 - **CWMB** — 18 environments for evaluating induced executable transition models through model fidelity and downstream policy learning. [![arXiv][res-arxiv]](https://arxiv.org/abs/2405.15383) [![Code and Data][res-code-data]](https://github.com/nicoladainese96/code-world-models)
 - **Text2World** — Generation of executable PDDL world models from natural-language descriptions. [![Paper][res-paper]](https://aclanthology.org/2025.findings-acl.1337/) [![Code and Data][res-code-data]](https://github.com/Aaron617/text2world)
@@ -161,8 +150,7 @@ This second direction uses “Code World Model” to mean a learned model of **s
 
 ### Repository and Terminal World Models
 
-- **Qwen-AgentWorld** — *Qwen-AgentWorld: Language World Models for General Agents*. arXiv 2026. A native next-observation model trained across seven agent environments; its Terminal and SWE domains predict shell, file-system, edit, compiler, and test feedback. ![Transition][tag-transition] ![Repository][tag-repo] ![Terminal][tag-terminal] ![Open Model][tag-open-model]
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2606.24597) [![Code][res-code]](https://github.com/QwenLM/Qwen-AgentWorld) [![Model][res-model]](https://huggingface.co/Qwen/Qwen-AgentWorld-35B-A3B) [![Benchmark][res-benchmark]](https://huggingface.co/datasets/Qwen/AgentWorldBench)
+- **Qwen-AgentWorld** — *Qwen-AgentWorld: Language World Models for General Agents*. arXiv 2026. A native next-observation model trained across seven agent environments; its Terminal and SWE domains predict shell, file-system, edit, compiler, and test feedback. ![Transition][tag-transition] ![Repository][tag-repo] ![Terminal][tag-terminal]  [![arXiv][res-arxiv]](https://arxiv.org/abs/2606.24597) [![Code][res-code]](https://github.com/QwenLM/Qwen-AgentWorld) [![Model][res-model]](https://huggingface.co/Qwen/Qwen-AgentWorld-35B-A3B) [![Benchmark][res-benchmark]](https://huggingface.co/datasets/Qwen/AgentWorldBench)
 
 - **ECHO** — *ECHO: Terminal Agents Learn World Models for Free*. arXiv 2026. Adds an environment-observation prediction objective to terminal-agent RL, learning command effects from stdout, errors, files, logs, and traces already present in rollouts. ![Transition][tag-transition] ![Terminal][tag-terminal]
   [![arXiv][res-arxiv]](https://arxiv.org/abs/2605.24517)
@@ -170,8 +158,7 @@ This second direction uses “Code World Model” to mean a learned model of **s
 - **SWE-World** — *SWE-World: Building Software Engineering Agents in Docker-Free Environments*. arXiv 2026. Replaces physical repository execution with learned transition and reward models that simulate command outcomes and final test feedback. ![Transition][tag-transition] ![Reward][tag-reward] ![Repository][tag-repo]
   [![arXiv][res-arxiv]](https://arxiv.org/abs/2602.03419) [![Code][res-code]](https://github.com/RUCAIBox/SWE-World)
 
-- **CWM** — *CWM: An Open-Weights LLM for Research on Code Generation with World Models*. arXiv 2025. A 32B model mid-trained on Python execution traces and agent interactions in containerized software environments. ![Transition][tag-transition] ![Trace][tag-trace] ![Repository][tag-repo] ![Open Model][tag-open-model]
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2510.02387) [![Website][res-website]](https://ai.meta.com/research/publications/cwm-an-open-weights-llm-for-research-on-code-generation-with-world-models/) [![Code][res-code]](https://github.com/facebookresearch/cwm) [![Model][res-model]](https://huggingface.co/facebook/cwm)
+- **CWM** — *CWM: An Open-Weights LLM for Research on Code Generation with World Models*. arXiv 2025. A 32B model mid-trained on Python execution traces and agent interactions in containerized software environments. ![Transition][tag-transition] ![Trace][tag-trace] ![Repository][tag-repo]  [![arXiv][res-arxiv]](https://arxiv.org/abs/2510.02387) [![Website][res-website]](https://ai.meta.com/research/publications/cwm-an-open-weights-llm-for-research-on-code-generation-with-world-models/) [![Code][res-code]](https://github.com/facebookresearch/cwm) [![Model][res-model]](https://huggingface.co/facebook/cwm)
 
 ### Program Execution and State Models
 
@@ -255,20 +242,18 @@ The organization of this repository is inspired by [Awesome World Models](https:
 
 If you find a missing paper or a classification mistake, please open an issue or submit a pull request.
 
-[tag-code-state]: https://img.shields.io/badge/code_state-5B4BDB?style=flat-square
-[tag-agent-written]: https://img.shields.io/badge/agent_written-8B5CF6?style=flat-square
-[tag-induced]: https://img.shields.io/badge/induced-F59E0B?style=flat-square
-[tag-neural-renderer]: https://img.shields.io/badge/neural_renderer-00A67E?style=flat-square
-[tag-explicit-state]: https://img.shields.io/badge/explicit_state-2563EB?style=flat-square
-[tag-software-world]: https://img.shields.io/badge/software_world-475569?style=flat-square
-[tag-transition]: https://img.shields.io/badge/transition-0EA5E9?style=flat-square
-[tag-trace]: https://img.shields.io/badge/trace-7C3AED?style=flat-square
-[tag-outcome]: https://img.shields.io/badge/outcome-EA580C?style=flat-square
-[tag-reward]: https://img.shields.io/badge/reward-16A34A?style=flat-square
-[tag-repo]: https://img.shields.io/badge/repository-334155?style=flat-square
-[tag-terminal]: https://img.shields.io/badge/terminal-111827?style=flat-square
-[tag-open-code]: https://img.shields.io/badge/open_code-brightgreen?style=flat-square
-[tag-open-model]: https://img.shields.io/badge/open_model-22C55E?style=flat-square
+[tag-code-state]: https://img.shields.io/badge/code_state-8B7BD8?style=flat-square
+[tag-agent-written]: https://img.shields.io/badge/agent_written-A78BDB?style=flat-square
+[tag-induced]: https://img.shields.io/badge/induced-E7B75F?style=flat-square
+[tag-neural-renderer]: https://img.shields.io/badge/neural_renderer-63B995?style=flat-square
+[tag-explicit-state]: https://img.shields.io/badge/explicit_state-6E9FDB?style=flat-square
+[tag-software-world]: https://img.shields.io/badge/software_world-94A3B8?style=flat-square
+[tag-transition]: https://img.shields.io/badge/transition-7CB8D4?style=flat-square
+[tag-trace]: https://img.shields.io/badge/trace-A78BDB?style=flat-square
+[tag-outcome]: https://img.shields.io/badge/outcome-E8A87C?style=flat-square
+[tag-reward]: https://img.shields.io/badge/reward-8FBC8F?style=flat-square
+[tag-repo]: https://img.shields.io/badge/repository-94A3B8?style=flat-square
+[tag-terminal]: https://img.shields.io/badge/terminal-6B7280?style=flat-square
 
 [res-arxiv]: https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white
 [res-paper]: https://img.shields.io/badge/Paper-Link-555555
@@ -277,6 +262,7 @@ If you find a missing paper or a classification mistake, please open an issue or
 [res-model]: https://img.shields.io/badge/Model-Hugging_Face-FFD21E
 [res-data]: https://img.shields.io/badge/Data-Dataset-F59E0B
 [res-code-data]: https://img.shields.io/badge/Code%20%26%20Data-GitHub-2DA44E?logo=github&logoColor=white
+[res-repo]: https://img.shields.io/badge/Repository-GitHub-94A3B8?logo=github&logoColor=white
 [res-artifacts]: https://img.shields.io/badge/Artifacts-GitHub-2DA44E?logo=github&logoColor=white
 [res-benchmark]: https://img.shields.io/badge/Benchmark-Dataset-F97316
 [res-blog]: https://img.shields.io/badge/Blog-Read-8B5CF6

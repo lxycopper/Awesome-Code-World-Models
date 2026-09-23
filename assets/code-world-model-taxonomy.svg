@@ -40,7 +40,7 @@
   <text x="60" y="88" class="subtitle">Classified by what code represents, how world state evolves, and how observations are produced</text>
 
   <!-- Root -->
-  <rect x="600" y="118" width="400" height="92" rx="20" fill="url(#header)" filter="url(#shadow)"/>
+  <rect x="520" y="118" width="560" height="92" rx="20" fill="url(#header)" filter="url(#shadow)"/>
   <text x="800" y="157" text-anchor="middle" class="root-title">CODE WORLD MODELS</text>
   <text x="800" y="185" text-anchor="middle" class="root-subtitle">Executable representations, persistent state, and learned dynamics</text>
 
@@ -68,7 +68,7 @@
   <path d="M1300 358 V438" class="connector"/>
 
   <!-- Programmatic visual card -->
-  <rect x="40" y="438" width="340" height="232" rx="18" fill="#faf5ff" stroke="#7c3aed" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="40" y="438" width="340" height="260" rx="18" fill="#faf5ff" stroke="#7c3aed" stroke-width="2.5" filter="url(#shadow)"/>
   <circle cx="72" cy="474" r="17" fill="#7c3aed"/>
   <text x="72" y="480" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#ffffff">1</text>
   <text x="101" y="480" class="card-title" fill="#6d28d9">Programmatic Visual CWMs</text>
@@ -78,6 +78,7 @@
   <text x="66" y="584" class="item">- Code World Model: World Brain</text>
   <text x="66" y="611" class="item">- Code as Worlds</text>
   <text x="66" y="638" class="item">- VisPhyWorld</text>
+  <text x="66" y="665" class="item">- CoDeR</text>
 
   <!-- Executable program card -->
   <rect x="410" y="438" width="340" height="232" rx="18" fill="#fff7ed" stroke="#d97706" stroke-width="2.5" filter="url(#shadow)"/>
@@ -122,14 +123,14 @@
   <text x="1207" y="747" class="item">SURGE | CRUXEval | R-Eval | CoRE</text>
 
   <!-- Context and benchmark cards -->
-  <rect x="40" y="742" width="500" height="150" rx="18" fill="#fdf2f8" stroke="#db2777" stroke-width="2.5" stroke-dasharray="10 8"/>
+  <rect x="40" y="742" width="500" height="150" rx="18" fill="#fdf2f8" stroke="#db2777" stroke-width="2.5" stroke-dasharray="10 8" opacity="0.9"/>
   <rect x="64" y="760" width="140" height="24" rx="12" fill="#db2777"/>
   <text x="134" y="777" text-anchor="middle" class="chip" fill="#ffffff">ADJACENT</text>
   <text x="64" y="816" class="card-title" fill="#be185d">Neural Visual World Models</text>
   <text x="64" y="844" class="card-subtitle">Action-conditioned pixels or latents; no executable canonical state</text>
   <text x="64" y="873" class="item">Genie | GameNGen | DIAMOND | YUME</text>
 
-  <rect x="590" y="742" width="530" height="150" rx="18" fill="#ecfdf5" stroke="#059669" stroke-width="2.5"/>
+  <rect x="590" y="742" width="530" height="150" rx="18" fill="#ecfdf5" stroke="#059669" stroke-width="2.5" opacity="0.9"/>
   <rect x="614" y="760" width="136" height="24" rx="12" fill="#059669"/>
   <text x="682" y="777" text-anchor="middle" class="chip" fill="#ffffff">SUPPORT</text>
   <text x="614" y="816" class="card-title" fill="#047857">Programmatic-World Benchmarks</text>
@@ -137,8 +138,8 @@
   <text x="614" y="873" class="item">CombatStateBench | VisPhyBench | CWMB | Text2World</text>
 
   <!-- Relationship arrows -->
-  <path d="M540 812 H565 Q580 812 580 797 V694 Q580 680 580 670" fill="none" stroke="#059669" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#arrow-green)"/>
-  <path d="M290 742 V706 Q290 690 306 690 H930 Q950 690 950 670" fill="none" stroke="#db2777" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#arrow-pink)"/>
+  <path d="M540 812 H565 Q580 812 580 797 V694 Q580 680 580 670" fill="none" stroke="#059669" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#arrow-green)" opacity="0.8"/>
+  <path d="M290 742 V706 Q290 690 306 690 H930 Q950 690 950 670" fill="none" stroke="#db2777" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#arrow-pink)" opacity="0.8"/>
 
   <!-- Legend -->
   <line x1="60" y1="922" x2="100" y2="922" stroke="#334155" stroke-width="3"/>
