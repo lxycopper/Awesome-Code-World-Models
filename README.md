@@ -76,9 +76,8 @@ The taxonomy separates the repository's primary focus—code as the executable r
 
 These works most directly match this repository's primary focus: executable programs maintain or reconstruct a world, and visual observations are produced through a rendering pipeline.
 
-- **Programmable World Model**. arXiv 2026.<br>
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2609.10540) [![Website][res-website]](https://alaya-lab.github.io/pwm/) [![Repository][res-repo]](https://github.com/AlayaLab/pwm)
-
+- <div><strong>Programmable World Model</strong>. arXiv 2026.<br>
+  <a href="https://arxiv.org/abs/2609.10540"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a> <a href="https://alaya-lab.github.io/pwm/"><img src="https://img.shields.io/badge/Website-Link-2563EB" alt="Website"></a> <a href="https://github.com/AlayaLab/pwm"><img src="https://img.shields.io/badge/Repository-GitHub-94A3B8?logo=github&logoColor=white" alt="Repository"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -88,9 +87,8 @@ These works most directly match this repository's primary focus: executable prog
 
   </details>
 
-- **Code World Model: Coding Agent as World Brain**. arXiv 2026.<br>
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2608.25927) [![Website][res-website]](https://buaacyw.github.io/cwm/) [![Code][res-code]](https://github.com/buaacyw/code-world-model) [![Model][res-model]](https://huggingface.co/NTU-yiwen/awm-minimax-h3-new1344-lora-checkpoints)
-
+- <div><strong>Code World Model: Coding Agent as World Brain</strong>. arXiv 2026.<br>
+  <a href="https://arxiv.org/abs/2608.25927"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a> <a href="https://buaacyw.github.io/cwm/"><img src="https://img.shields.io/badge/Website-Link-2563EB" alt="Website"></a> <a href="https://github.com/buaacyw/code-world-model"><img src="https://img.shields.io/badge/Code-GitHub-2DA44E?logo=github&logoColor=white" alt="Code"></a> <a href="https://huggingface.co/NTU-yiwen/awm-minimax-h3-new1344-lora-checkpoints"><img src="https://img.shields.io/badge/Model-Hugging_Face-FFD21E" alt="Model"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -100,9 +98,8 @@ These works most directly match this repository's primary focus: executable prog
 
   </details>
 
-- **Code as Worlds: Agentic Discovery of Executable World Representations for Physical Reasoning**. arXiv 2026.<br>
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2608.27549) [![Website][res-website]](https://mirros-lab.github.io/code-as-world/) [![Code][res-code]](https://github.com/MirroS-Lab/Code-as-World)
-
+- <div><strong>Code as Worlds: Agentic Discovery of Executable World Representations for Physical Reasoning</strong>. arXiv 2026.<br>
+  <a href="https://arxiv.org/abs/2608.27549"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a> <a href="https://mirros-lab.github.io/code-as-world/"><img src="https://img.shields.io/badge/Website-Link-2563EB" alt="Website"></a> <a href="https://github.com/MirroS-Lab/Code-as-World"><img src="https://img.shields.io/badge/Code-GitHub-2DA44E?logo=github&logoColor=white" alt="Code"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -112,9 +109,8 @@ These works most directly match this repository's primary focus: executable prog
 
   </details>
 
-- **VisPhyWorld: Probing Physical Reasoning via Code-Driven Video Reconstruction**. arXiv 2026.<br>
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2602.13294) [![Website][res-website]](https://tiger-ai-lab.github.io/VisPhyWorld/) [![Code][res-code]](https://github.com/TIGER-AI-Lab/VisPhyWorld)
-
+- <div><strong>VisPhyWorld: Probing Physical Reasoning via Code-Driven Video Reconstruction</strong>. arXiv 2026.<br>
+  <a href="https://arxiv.org/abs/2602.13294"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a> <a href="https://tiger-ai-lab.github.io/VisPhyWorld/"><img src="https://img.shields.io/badge/Website-Link-2563EB" alt="Website"></a> <a href="https://github.com/TIGER-AI-Lab/VisPhyWorld"><img src="https://img.shields.io/badge/Code-GitHub-2DA44E?logo=github&logoColor=white" alt="Code"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -124,9 +120,8 @@ These works most directly match this repository's primary focus: executable prog
 
   </details>
 
-- **Code Plans, Diffusion Renders: Open-Ended Generative World Modeling**. arXiv 2026.<br>
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2609.26458)
-
+- <div><strong>Code Plans, Diffusion Renders: Open-Ended Generative World Modeling</strong>. arXiv 2026.<br>
+  <a href="https://arxiv.org/abs/2609.26458"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -140,9 +135,8 @@ These works most directly match this repository's primary focus: executable prog
 
 These systems share the key separation between authoritative state/dynamics and visual realization, but their state transitions are learned or conventionally authored rather than maintained as open-ended code by an agent.
 
-- **Magpie: Real-Time World Renderer for Interactive Games**. arXiv 2026.<br>
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2608.27168) [![Website][res-website]](https://zhanxy.xyz/Magpie-website) [![Data][res-data]](https://huggingface.co/datasets/MogoAI/Magpie_lite)
-
+- <div><strong>Magpie: Real-Time World Renderer for Interactive Games</strong>. arXiv 2026.<br>
+  <a href="https://arxiv.org/abs/2608.27168"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a> <a href="https://zhanxy.xyz/Magpie-website"><img src="https://img.shields.io/badge/Website-Link-2563EB" alt="Website"></a> <a href="https://huggingface.co/datasets/MogoAI/Magpie_lite"><img src="https://img.shields.io/badge/Data-Dataset-F59E0B" alt="Data"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -152,9 +146,8 @@ These systems share the key separation between authoritative state/dynamics and 
 
   </details>
 
-- **Marionette: Predicting World States, Rendering Geometry, Painting Appearance**. arXiv 2026.<br>
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2608.14530) [![Website][res-website]](https://alayalab.github.io/Marionette/) [![Code][res-code]](https://github.com/AlayaLab/Marionette) [![Model][res-model]](https://huggingface.co/AlayaLab/Marionette)
-
+- <div><strong>Marionette: Predicting World States, Rendering Geometry, Painting Appearance</strong>. arXiv 2026.<br>
+  <a href="https://arxiv.org/abs/2608.14530"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a> <a href="https://alayalab.github.io/Marionette/"><img src="https://img.shields.io/badge/Website-Link-2563EB" alt="Website"></a> <a href="https://github.com/AlayaLab/Marionette"><img src="https://img.shields.io/badge/Code-GitHub-2DA44E?logo=github&logoColor=white" alt="Code"></a> <a href="https://huggingface.co/AlayaLab/Marionette"><img src="https://img.shields.io/badge/Model-Hugging_Face-FFD21E" alt="Model"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -164,9 +157,8 @@ These systems share the key separation between authoritative state/dynamics and 
 
   </details>
 
-- **MASS: Multiplayer World Models with Authoritative Shared State**. arXiv 2026.<br>
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2608.06257) [![Website][res-website]](https://alaya-lab.github.io/MASS/)
-
+- <div><strong>MASS: Multiplayer World Models with Authoritative Shared State</strong>. arXiv 2026.<br>
+  <a href="https://arxiv.org/abs/2608.06257"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a> <a href="https://alaya-lab.github.io/MASS/"><img src="https://img.shields.io/badge/Website-Link-2563EB" alt="Website"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -176,9 +168,8 @@ These systems share the key separation between authoritative state/dynamics and 
 
   </details>
 
-- **StatePlay: State-Aware Game World Models for Mechanics-Consistent Generation**. arXiv 2026.<br>
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2607.26754) [![Website][res-website]](https://jimntu.github.io/stateplay_page/) [![Code][res-code]](https://github.com/Jimntu/StatePlay) [![Model][res-model]](https://huggingface.co/onepiece1999/StatePlay)
-
+- <div><strong>StatePlay: State-Aware Game World Models for Mechanics-Consistent Generation</strong>. arXiv 2026.<br>
+  <a href="https://arxiv.org/abs/2607.26754"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a> <a href="https://jimntu.github.io/stateplay_page/"><img src="https://img.shields.io/badge/Website-Link-2563EB" alt="Website"></a> <a href="https://github.com/Jimntu/StatePlay"><img src="https://img.shields.io/badge/Code-GitHub-2DA44E?logo=github&logoColor=white" alt="Code"></a> <a href="https://huggingface.co/onepiece1999/StatePlay"><img src="https://img.shields.io/badge/Model-Hugging_Face-FFD21E" alt="Model"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -192,9 +183,8 @@ These systems share the key separation between authoritative state/dynamics and 
 
 These works learn, synthesize, or repair executable transition models for planning and simulation, usually without a neural visual renderer.
 
-- **VisualPatchWorld: Code World Models as Latent Structured Representations for Planning**. arXiv 2026.<br>
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2607.25236) [![Code][res-code]](https://github.com/HKBU-KnowComp/VisualPatchWorld)
-
+- <div><strong>VisualPatchWorld: Code World Models as Latent Structured Representations for Planning</strong>. arXiv 2026.<br>
+  <a href="https://arxiv.org/abs/2607.25236"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a> <a href="https://github.com/HKBU-KnowComp/VisualPatchWorld"><img src="https://img.shields.io/badge/Code-GitHub-2DA44E?logo=github&logoColor=white" alt="Code"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -204,9 +194,8 @@ These works learn, synthesize, or repair executable transition models for planni
 
   </details>
 
-- **Mind-Studio: Executable World Models with Lookahead Evaluation for Partially Observable Games**. arXiv 2026.<br>
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2606.16070) [![Code][res-code]](https://github.com/HKBU-KnowComp/MindStudio)
-
+- <div><strong>Mind-Studio: Executable World Models with Lookahead Evaluation for Partially Observable Games</strong>. arXiv 2026.<br>
+  <a href="https://arxiv.org/abs/2606.16070"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a> <a href="https://github.com/HKBU-KnowComp/MindStudio"><img src="https://img.shields.io/badge/Code-GitHub-2DA44E?logo=github&logoColor=white" alt="Code"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -216,9 +205,8 @@ These works learn, synthesize, or repair executable transition models for planni
 
   </details>
 
-- **Executable World Models for ARC-AGI-3 in the Era of Coding Agents**. arXiv 2026.<br>
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2605.05138) [![Code][res-code]](https://github.com/astroseger/arc-3-agents-baseline1)
-
+- <div><strong>Executable World Models for ARC-AGI-3 in the Era of Coding Agents</strong>. arXiv 2026.<br>
+  <a href="https://arxiv.org/abs/2605.05138"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a> <a href="https://github.com/astroseger/arc-3-agents-baseline1"><img src="https://img.shields.io/badge/Code-GitHub-2DA44E?logo=github&logoColor=white" alt="Code"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -228,9 +216,8 @@ These works learn, synthesize, or repair executable transition models for planni
 
   </details>
 
-- **PatchWorld: Gradient-Free Optimization of Executable World Models**. arXiv 2026.<br>
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2605.30880) [![Code][res-code]](https://github.com/HKBU-KnowComp/PatchWorld)
-
+- <div><strong>PatchWorld: Gradient-Free Optimization of Executable World Models</strong>. arXiv 2026.<br>
+  <a href="https://arxiv.org/abs/2605.30880"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a> <a href="https://github.com/HKBU-KnowComp/PatchWorld"><img src="https://img.shields.io/badge/Code-GitHub-2DA44E?logo=github&logoColor=white" alt="Code"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -240,9 +227,8 @@ These works learn, synthesize, or repair executable transition models for planni
 
   </details>
 
-- **Code World Models for General Game Playing**. ICLR 2026.<br>
-  [![Paper][res-paper]](https://proceedings.iclr.cc/paper_files/paper/2026/hash/d8a12fde9e72444e1b356e8c37e53753-Abstract-Conference.html)
-
+- <div><strong>Code World Models for General Game Playing</strong>. ICLR 2026.<br>
+  <a href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/d8a12fde9e72444e1b356e8c37e53753-Abstract-Conference.html"><img src="https://img.shields.io/badge/Paper-Link-555555" alt="Paper"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -252,9 +238,8 @@ These works learn, synthesize, or repair executable transition models for planni
 
   </details>
 
-- **PoE-World: Compositional World Modeling with Products of Programmatic Experts**. NeurIPS 2025 Spotlight.<br>
-  [![Paper][res-paper]](https://proceedings.neurips.cc/paper_files/paper/2025/hash/262dd62fd1bbb30d6a6b4d578f5e65ff-Abstract-Conference.html) [![Website][res-website]](https://topwasu.github.io/poe-world) [![Code][res-code]](https://github.com/topwasu/poe-world)
-
+- <div><strong>PoE-World: Compositional World Modeling with Products of Programmatic Experts</strong>. NeurIPS 2025 Spotlight.<br>
+  <a href="https://proceedings.neurips.cc/paper_files/paper/2025/hash/262dd62fd1bbb30d6a6b4d578f5e65ff-Abstract-Conference.html"><img src="https://img.shields.io/badge/Paper-Link-555555" alt="Paper"></a> <a href="https://topwasu.github.io/poe-world"><img src="https://img.shields.io/badge/Website-Link-2563EB" alt="Website"></a> <a href="https://github.com/topwasu/poe-world"><img src="https://img.shields.io/badge/Code-GitHub-2DA44E?logo=github&logoColor=white" alt="Code"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -264,9 +249,8 @@ These works learn, synthesize, or repair executable transition models for planni
 
   </details>
 
-- **LLM-Guided Probabilistic Program Induction for POMDP Model Estimation**. 2025.<br>
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2505.02216)
-
+- <div><strong>LLM-Guided Probabilistic Program Induction for POMDP Model Estimation</strong>. 2025.<br>
+  <a href="https://arxiv.org/abs/2505.02216"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -276,9 +260,8 @@ These works learn, synthesize, or repair executable transition models for planni
 
   </details>
 
-- **FactorSim: Generative Simulation via Factorized Representation**. NeurIPS 2024.<br>
-  [![Paper][res-paper]](https://proceedings.neurips.cc/paper_files/paper/2024/hash/9f35ec2f7f403ef2c83d65b581df10bc-Abstract-Conference.html) [![Website][res-website]](https://cs.stanford.edu/~sunfanyun/factorsim/) [![Code][res-code]](https://github.com/sunfanyunn/FactorSim)
-
+- <div><strong>FactorSim: Generative Simulation via Factorized Representation</strong>. NeurIPS 2024.<br>
+  <a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/9f35ec2f7f403ef2c83d65b581df10bc-Abstract-Conference.html"><img src="https://img.shields.io/badge/Paper-Link-555555" alt="Paper"></a> <a href="https://cs.stanford.edu/~sunfanyun/factorsim/"><img src="https://img.shields.io/badge/Website-Link-2563EB" alt="Website"></a> <a href="https://github.com/sunfanyunn/FactorSim"><img src="https://img.shields.io/badge/Code-GitHub-2DA44E?logo=github&logoColor=white" alt="Code"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -288,9 +271,8 @@ These works learn, synthesize, or repair executable transition models for planni
 
   </details>
 
-- **Generating Code World Models with Large Language Models Guided by Monte Carlo Tree Search**. NeurIPS 2024.<br>
-  [![Paper][res-paper]](https://proceedings.neurips.cc/paper_files/paper/2024/hash/6f479ea488e0908ac8b1b37b27fd134c-Abstract-Conference.html) [![Website][res-website]](https://sites.google.com/view/code-world-models/home) [![Code][res-code]](https://github.com/nicoladainese96/code-world-models)
-
+- <div><strong>Generating Code World Models with Large Language Models Guided by Monte Carlo Tree Search</strong>. NeurIPS 2024.<br>
+  <a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/6f479ea488e0908ac8b1b37b27fd134c-Abstract-Conference.html"><img src="https://img.shields.io/badge/Paper-Link-555555" alt="Paper"></a> <a href="https://sites.google.com/view/code-world-models/home"><img src="https://img.shields.io/badge/Website-Link-2563EB" alt="Website"></a> <a href="https://github.com/nicoladainese96/code-world-models"><img src="https://img.shields.io/badge/Code-GitHub-2DA44E?logo=github&logoColor=white" alt="Code"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -300,9 +282,8 @@ These works learn, synthesize, or repair executable transition models for planni
 
   </details>
 
-- **WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment**. NeurIPS 2024.<br>
-  [![Paper][res-paper]](https://proceedings.neurips.cc/paper_files/paper/2024/hash/820c61a0cd419163ccbd2c33b268816e-Abstract-Conference.html) [![Website][res-website]](https://haotang1995.github.io/projects/worldcoder) [![Code][res-code]](https://github.com/haotang1995/WorldCoder)
-
+- <div><strong>WorldCoder, a Model-Based LLM Agent: Building World Models by Writing Code and Interacting with the Environment</strong>. NeurIPS 2024.<br>
+  <a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/820c61a0cd419163ccbd2c33b268816e-Abstract-Conference.html"><img src="https://img.shields.io/badge/Paper-Link-555555" alt="Paper"></a> <a href="https://haotang1995.github.io/projects/worldcoder"><img src="https://img.shields.io/badge/Website-Link-2563EB" alt="Website"></a> <a href="https://github.com/haotang1995/WorldCoder"><img src="https://img.shields.io/badge/Code-GitHub-2DA44E?logo=github&logoColor=white" alt="Code"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -334,9 +315,8 @@ This second direction uses “Code World Model” to mean a learned model of **s
 
 ### Repository and Terminal World Models
 
-- **Qwen-AgentWorld: Language World Models for General Agents**. arXiv 2026.<br>
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2606.24597) [![Code][res-code]](https://github.com/QwenLM/Qwen-AgentWorld) [![Model][res-model]](https://huggingface.co/Qwen/Qwen-AgentWorld-35B-A3B) [![Benchmark][res-benchmark]](https://huggingface.co/datasets/Qwen/AgentWorldBench)
-
+- <div><strong>Qwen-AgentWorld: Language World Models for General Agents</strong>. arXiv 2026.<br>
+  <a href="https://arxiv.org/abs/2606.24597"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a> <a href="https://github.com/QwenLM/Qwen-AgentWorld"><img src="https://img.shields.io/badge/Code-GitHub-2DA44E?logo=github&logoColor=white" alt="Code"></a> <a href="https://huggingface.co/Qwen/Qwen-AgentWorld-35B-A3B"><img src="https://img.shields.io/badge/Model-Hugging_Face-FFD21E" alt="Model"></a> <a href="https://huggingface.co/datasets/Qwen/AgentWorldBench"><img src="https://img.shields.io/badge/Benchmark-Dataset-F97316" alt="Benchmark"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -346,9 +326,8 @@ This second direction uses “Code World Model” to mean a learned model of **s
 
   </details>
 
-- **ECHO: Terminal Agents Learn World Models for Free**. arXiv 2026.<br>
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2605.24517)
-
+- <div><strong>ECHO: Terminal Agents Learn World Models for Free</strong>. arXiv 2026.<br>
+  <a href="https://arxiv.org/abs/2605.24517"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -358,9 +337,8 @@ This second direction uses “Code World Model” to mean a learned model of **s
 
   </details>
 
-- **SWE-World: Building Software Engineering Agents in Docker-Free Environments**. arXiv 2026.<br>
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2602.03419) [![Code][res-code]](https://github.com/RUCAIBox/SWE-World)
-
+- <div><strong>SWE-World: Building Software Engineering Agents in Docker-Free Environments</strong>. arXiv 2026.<br>
+  <a href="https://arxiv.org/abs/2602.03419"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a> <a href="https://github.com/RUCAIBox/SWE-World"><img src="https://img.shields.io/badge/Code-GitHub-2DA44E?logo=github&logoColor=white" alt="Code"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -370,9 +348,8 @@ This second direction uses “Code World Model” to mean a learned model of **s
 
   </details>
 
-- **CWM: An Open-Weights LLM for Research on Code Generation with World Models**. arXiv 2025.<br>
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2510.02387) [![Website][res-website]](https://ai.meta.com/research/publications/cwm-an-open-weights-llm-for-research-on-code-generation-with-world-models/) [![Code][res-code]](https://github.com/facebookresearch/cwm) [![Model][res-model]](https://huggingface.co/facebook/cwm)
-
+- <div><strong>CWM: An Open-Weights LLM for Research on Code Generation with World Models</strong>. arXiv 2025.<br>
+  <a href="https://arxiv.org/abs/2510.02387"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a> <a href="https://ai.meta.com/research/publications/cwm-an-open-weights-llm-for-research-on-code-generation-with-world-models/"><img src="https://img.shields.io/badge/Website-Link-2563EB" alt="Website"></a> <a href="https://github.com/facebookresearch/cwm"><img src="https://img.shields.io/badge/Code-GitHub-2DA44E?logo=github&logoColor=white" alt="Code"></a> <a href="https://huggingface.co/facebook/cwm"><img src="https://img.shields.io/badge/Model-Hugging_Face-FFD21E" alt="Model"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -384,9 +361,8 @@ This second direction uses “Code World Model” to mean a learned model of **s
 
 ### Program Execution and State Models
 
-- **Towards a Neural Debugger for Python**. arXiv 2026.<br>
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2603.09951)
-
+- <div><strong>Towards a Neural Debugger for Python</strong>. arXiv 2026.<br>
+  <a href="https://arxiv.org/abs/2603.09951"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -396,9 +372,8 @@ This second direction uses “Code World Model” to mean a learned model of **s
 
   </details>
 
-- **Self-Execution Simulation Improves Coding Models**. arXiv 2026.<br>
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2604.03253)
-
+- <div><strong>Self-Execution Simulation Improves Coding Models</strong>. arXiv 2026.<br>
+  <a href="https://arxiv.org/abs/2604.03253"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -408,9 +383,8 @@ This second direction uses “Code World Model” to mean a learned model of **s
 
   </details>
 
-- **ExecVerify: White-Box RL with Verifiable Stepwise Rewards for Code Execution Reasoning**. ACL 2026.<br>
-  [![Paper][res-paper]](https://aclanthology.org/2026.acl-long.631/) [![Artifacts][res-artifacts]](https://github.com/tlx000000001/ExecVerify)
-
+- <div><strong>ExecVerify: White-Box RL with Verifiable Stepwise Rewards for Code Execution Reasoning</strong>. ACL 2026.<br>
+  <a href="https://aclanthology.org/2026.acl-long.631/"><img src="https://img.shields.io/badge/Paper-Link-555555" alt="Paper"></a> <a href="https://github.com/tlx000000001/ExecVerify"><img src="https://img.shields.io/badge/Artifacts-GitHub-2DA44E?logo=github&logoColor=white" alt="Artifacts"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -420,9 +394,8 @@ This second direction uses “Code World Model” to mean a learned model of **s
 
   </details>
 
-- **What I Cannot Execute, I Do Not Understand: Training and Evaluating LLMs on Program Execution Traces**. arXiv 2025.<br>
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2503.05703)
-
+- <div><strong>What I Cannot Execute, I Do Not Understand: Training and Evaluating LLMs on Program Execution Traces</strong>. arXiv 2025.<br>
+  <a href="https://arxiv.org/abs/2503.05703"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -432,9 +405,8 @@ This second direction uses “Code World Model” to mean a learned model of **s
 
   </details>
 
-- **SemCoder: Training Code Language Models with Comprehensive Semantics Reasoning**. NeurIPS 2024.<br>
-  [![Paper][res-paper]](https://proceedings.neurips.cc/paper_files/paper/2024/hash/6efcc7fd8efeee29a050a79c843c90e0-Abstract-Conference.html) [![Artifacts][res-artifacts]](https://github.com/ARiSE-Lab/SemCoder)
-
+- <div><strong>SemCoder: Training Code Language Models with Comprehensive Semantics Reasoning</strong>. NeurIPS 2024.<br>
+  <a href="https://proceedings.neurips.cc/paper_files/paper/2024/hash/6efcc7fd8efeee29a050a79c843c90e0-Abstract-Conference.html"><img src="https://img.shields.io/badge/Paper-Link-555555" alt="Paper"></a> <a href="https://github.com/ARiSE-Lab/SemCoder"><img src="https://img.shields.io/badge/Artifacts-GitHub-2DA44E?logo=github&logoColor=white" alt="Artifacts"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -444,9 +416,8 @@ This second direction uses “Code World Model” to mean a learned model of **s
 
   </details>
 
-- **TRACED: Execution-Aware Pre-training for Source Code**. ICSE 2024.<br>
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2306.07487) [![Code][res-code]](https://github.com/ARiSE-Lab/TRACED_ICSE_24)
-
+- <div><strong>TRACED: Execution-Aware Pre-training for Source Code</strong>. ICSE 2024.<br>
+  <a href="https://arxiv.org/abs/2306.07487"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a> <a href="https://github.com/ARiSE-Lab/TRACED_ICSE_24"><img src="https://img.shields.io/badge/Code-GitHub-2DA44E?logo=github&logoColor=white" alt="Code"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -456,9 +427,8 @@ This second direction uses “Code World Model” to mean a learned model of **s
 
   </details>
 
-- **Code Execution with Pre-trained Language Models**. Findings of ACL 2023.<br>
-  [![Paper][res-paper]](https://aclanthology.org/2023.findings-acl.308/) [![Code and Data][res-code-data]](https://github.com/microsoft/CodeBERT/tree/master/CodeExecutor)
-
+- <div><strong>Code Execution with Pre-trained Language Models</strong>. Findings of ACL 2023.<br>
+  <a href="https://aclanthology.org/2023.findings-acl.308/"><img src="https://img.shields.io/badge/Paper-Link-555555" alt="Paper"></a> <a href="https://github.com/microsoft/CodeBERT/tree/master/CodeExecutor"><img src="https://img.shields.io/badge/Code%20%26%20Data-GitHub-2DA44E?logo=github&logoColor=white" alt="Code and Data"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -468,9 +438,8 @@ This second direction uses “Code World Model” to mean a learned model of **s
 
   </details>
 
-- **Learning to Execute**. arXiv 2014.<br>
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/1410.4615) [![Code][res-code]](https://github.com/wojciechz/learning_to_execute)
-
+- <div><strong>Learning to Execute</strong>. arXiv 2014.<br>
+  <a href="https://arxiv.org/abs/1410.4615"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a> <a href="https://github.com/wojciechz/learning_to_execute"><img src="https://img.shields.io/badge/Code-GitHub-2DA44E?logo=github&logoColor=white" alt="Code"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -482,9 +451,8 @@ This second direction uses “Code World Model” to mean a learned model of **s
 
 ### Software-World Evaluation and Analysis
 
-- **Towards Evaluation of Implicit Software World Models in Coding LLMs**. DL4Code at ICML 2026.<br>
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2606.27406) [![Code][res-code]](https://github.com/JetBrains-Research/cwm-execution-tracer) [![Data][res-data]](https://huggingface.co/datasets/JetBrains-Research/cwm-benchmarks-dl4c-benchmark)
-
+- <div><strong>Towards Evaluation of Implicit Software World Models in Coding LLMs</strong>. DL4Code at ICML 2026.<br>
+  <a href="https://arxiv.org/abs/2606.27406"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a> <a href="https://github.com/JetBrains-Research/cwm-execution-tracer"><img src="https://img.shields.io/badge/Code-GitHub-2DA44E?logo=github&logoColor=white" alt="Code"></a> <a href="https://huggingface.co/datasets/JetBrains-Research/cwm-benchmarks-dl4c-benchmark"><img src="https://img.shields.io/badge/Data-Dataset-F59E0B" alt="Data"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -492,9 +460,8 @@ This second direction uses “Code World Model” to mean a learned model of **s
 
   </details>
 
-- **Debugging Code World Models**. 2026.<br>
-  [![arXiv][res-arxiv]](https://arxiv.org/abs/2602.07672) [![Blog][res-blog]](https://babak70.github.io/code-world-models-blog/)
-
+- <div><strong>Debugging Code World Models</strong>. 2026.<br>
+  <a href="https://arxiv.org/abs/2602.07672"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a> <a href="https://babak70.github.io/code-world-models-blog/"><img src="https://img.shields.io/badge/Blog-Read-8B5CF6" alt="Blog"></a></div>
   <details>
   <summary>TL;DR</summary>
 
@@ -567,10 +534,5 @@ If you find a missing paper or a classification mistake, please open an issue or
 [res-paper]: https://img.shields.io/badge/Paper-Link-555555
 [res-website]: https://img.shields.io/badge/Website-Link-2563EB
 [res-code]: https://img.shields.io/badge/Code-GitHub-2DA44E?logo=github&logoColor=white
-[res-model]: https://img.shields.io/badge/Model-Hugging_Face-FFD21E
 [res-data]: https://img.shields.io/badge/Data-Dataset-F59E0B
 [res-code-data]: https://img.shields.io/badge/Code%20%26%20Data-GitHub-2DA44E?logo=github&logoColor=white
-[res-repo]: https://img.shields.io/badge/Repository-GitHub-94A3B8?logo=github&logoColor=white
-[res-artifacts]: https://img.shields.io/badge/Artifacts-GitHub-2DA44E?logo=github&logoColor=white
-[res-benchmark]: https://img.shields.io/badge/Benchmark-Dataset-F97316
-[res-blog]: https://img.shields.io/badge/Blog-Read-8B5CF6
