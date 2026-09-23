@@ -66,7 +66,7 @@ Here, $P$ is the executable world program. It may be written by a coding agent, 
 
 ## Taxonomy at a Glance
 
-The taxonomy separates the repository's primary focus—code as the executable representation of an external world—from software world models, where code is the world being modeled. Dashed branches show adjacent neural visual models and supporting benchmarks.
+The poster separates the repository's primary focus—code as the executable representation of an external world—from software world models, where code is the world being modeled. The dashed card marks adjacent neural visual models that provide rendering context without executable state.
 
 <p align="center">
   <img src="assets/code-world-model-taxonomy.svg" width="100%" alt="Taxonomy of Code World Models, including programmatic visual world models, executable program world models, explicit-state bridges, software world models, benchmarks, and adjacent neural visual models." />

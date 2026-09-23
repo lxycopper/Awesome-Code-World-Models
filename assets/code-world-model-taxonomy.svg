@@ -1,151 +1,236 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="950" viewBox="0 0 1600 950" role="img" aria-labelledby="title desc">
-  <title id="title">Taxonomy of Code World Models</title>
-  <desc id="desc">A hierarchy separating programmatic external-world models, software-world models, benchmarks, and adjacent neural visual world models.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1310" viewBox="0 0 1920 1310" role="img" aria-labelledby="title desc">
+  <title id="title">Code World Models — Taxonomy Poster</title>
+  <desc id="desc">A poster-style taxonomy of Code World Models: programmatic visual world models, world models as executable programs, explicit-state bridges, software world models, benchmarks, and adjacent neural visual world models.</desc>
   <defs>
-    <linearGradient id="header" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#172554"/>
-      <stop offset="100%" stop-color="#312e81"/>
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
     </linearGradient>
     <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
-      <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#0f172a" flood-opacity="0.10"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0f172a" flood-opacity="0.08"/>
     </filter>
-    <marker id="arrow-navy" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#334155"/>
-    </marker>
-    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#059669"/>
-    </marker>
-    <marker id="arrow-pink" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
-      <path d="M0,0 L0,6 L9,3 z" fill="#db2777"/>
-    </marker>
     <style>
-      .title { font: 700 36px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0f172a; }
-      .subtitle { font: 400 18px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #64748b; }
-      .root-title { font: 700 27px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #ffffff; }
-      .root-subtitle { font: 400 15px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #dbeafe; }
-      .branch-title { font: 700 22px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0f172a; }
-      .branch-subtitle { font: 500 15px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #475569; }
-      .card-title { font: 700 20px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
-      .card-subtitle { font: 500 14px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #475569; }
-      .item { font: 500 15px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #1e293b; }
-      .small { font: 500 13px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #64748b; }
-      .chip { font: 700 12px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0.08em; }
-      .connector { fill: none; stroke: #334155; stroke-width: 3; }
+      .t-chip { font: 700 12.5px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0.08em; }
+      .t-title { font: 800 56px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .t-sub { font: 400 18px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #64748b; }
+      .eq { font: 700 26px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #ffffff; }
+      .eq-cap { font: 400 13.5px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #93c5fd; }
+      .pill-num { font: 800 15px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .pill-txt { font: 700 18px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #ffffff; letter-spacing: 0.02em; }
+      .g-pill { font: 700 15px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0.08em; }
+      .g-body { font: 400 15px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #e2e8f0; }
+      .g-stat { font: 400 15px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .c-sub { font: 500 13.5px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #64748b; }
+      .e-name { font: 700 16px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #0f172a; }
+      .e-desc { font: 400 13.5px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #64748b; }
+      .ol { font: 400 14px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #64748b; }
+      .ol-name { font-weight: 700; fill: #0f172a; }
+      .sg { font: 700 12.5px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; letter-spacing: 0.1em; }
+      .note { font: 400 italic 13px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .footer { font: 500 13.5px Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #94a3b8; }
     </style>
   </defs>
 
-  <rect width="1600" height="950" fill="#ffffff"/>
+  <rect width="1920" height="1310" fill="#f8fafc"/>
 
-  <text x="60" y="58" class="title">Taxonomy of Code World Models</text>
-  <text x="60" y="88" class="subtitle">Classified by what code represents, how world state evolves, and how observations are produced</text>
+  <!-- Header -->
+  <rect x="60" y="36" width="240" height="32" rx="16" fill="#e0e7ff"/>
+  <text x="80" y="57" class="t-chip" fill="#4338ca">TAXONOMY · SEPTEMBER 2026</text>
+  <text x="60" y="118" class="t-title" fill="url(#titleGrad)">Code World Models</text>
+  <text x="60" y="156" class="t-sub">A curated taxonomy of world models whose state and dynamics are represented, generated, or maintained as executable code</text>
 
-  <!-- Root -->
-  <rect x="520" y="118" width="560" height="92" rx="20" fill="url(#header)" filter="url(#shadow)"/>
-  <text x="800" y="157" text-anchor="middle" class="root-title">CODE WORLD MODELS</text>
-  <text x="800" y="185" text-anchor="middle" class="root-subtitle">Executable representations, persistent state, and learned dynamics</text>
+  <rect x="1360" y="40" width="500" height="112" rx="18" fill="#172554" filter="url(#shadow)"/>
+  <text x="1610" y="92" text-anchor="middle" class="eq">s<tspan dy="4" font-size="16">t+1</tspan><tspan dy="-4"> = P(s</tspan><tspan dy="4" font-size="16">t</tspan><tspan dy="-4">, a</tspan><tspan dy="4" font-size="16">t</tspan><tspan dy="-4">, e</tspan><tspan dy="4" font-size="16">t</tspan><tspan dy="-4">)</tspan></text>
+  <text x="1610" y="126" text-anchor="middle" class="eq-cap">code = the executable state and transition rules of the world</text>
 
-  <!-- Root connectors -->
-  <path d="M800 210 V236 H550 V258" class="connector"/>
-  <path d="M800 210 V236 H1300 V258" class="connector"/>
+  <!-- At a Glance -->
+  <rect x="60" y="200" width="580" height="320" rx="18" fill="#172554" filter="url(#shadow)"/>
+  <rect x="76" y="216" width="150" height="36" rx="18" fill="#ffffff"/>
+  <text x="96" y="240" class="g-pill" fill="#172554">AT A GLANCE</text>
+  <text x="92" y="286" class="g-body">A Code World Model represents an external world's entities,</text>
+  <text x="92" y="310" class="g-body">state, relations, events, and transition rules as executable</text>
+  <text x="92" y="334" class="g-body">code. A compiler turns the state into visual controls, and a</text>
+  <text x="92" y="358" class="g-body">generative renderer produces the observations.</text>
+  <line x1="92" y1="378" x2="548" y2="378" stroke="#334155"/>
+  <circle cx="96" cy="401" r="4" fill="#a78bfa"/>
+  <text x="116" y="406" class="g-stat"><tspan font-weight="700" fill="#ffffff">Primary focus</tspan><tspan fill="#cbd5e1"> — code as the executable brain of an external world</tspan></text>
+  <circle cx="96" cy="431" r="4" fill="#94a3b8"/>
+  <text x="116" y="436" class="g-stat"><tspan font-weight="700" fill="#ffffff">Second direction</tspan><tspan fill="#cbd5e1"> — learned models of software execution</tspan></text>
+  <circle cx="96" cy="461" r="4" fill="#34d399"/>
+  <text x="116" y="466" class="g-stat"><tspan font-weight="700" fill="#ffffff">Coverage</tspan><tspan fill="#cbd5e1"> — 33 papers · 16 benchmarks · 2014–2026</tspan></text>
 
-  <!-- Main branches -->
-  <rect x="100" y="258" width="900" height="100" rx="18" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2.5" filter="url(#shadow)"/>
-  <rect x="126" y="279" width="116" height="25" rx="12.5" fill="#7c3aed"/>
-  <text x="184" y="297" text-anchor="middle" class="chip" fill="#ffffff">PRIMARY</text>
-  <text x="126" y="330" class="branch-title">PROGRAMMATIC EXTERNAL WORLDS</text>
-  <text x="617" y="330" class="branch-subtitle">Code represents another world's entities, state, rules, and dynamics</text>
+  <!-- 01 Programmatic Visual World Models -->
+  <rect x="60" y="540" width="580" height="366" rx="18" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="76" y="556" width="400" height="40" rx="20" fill="#7c3aed"/>
+  <circle cx="98" cy="576" r="13" fill="#ffffff"/>
+  <text x="98" y="581" text-anchor="middle" class="pill-num" fill="#7c3aed">01</text>
+  <text x="120" y="582" class="pill-txt">Programmatic Visual World Models</text>
+  <text x="92" y="626" class="c-sub">Code is the authoritative state; a neural renderer realizes observations</text>
+  <line x1="92" y1="640" x2="548" y2="640" stroke="#e9d5ff"/>
+  <circle cx="96" cy="665" r="3.5" fill="#7c3aed"/>
+  <text x="112" y="670" class="e-name">Programmable World Model</text>
+  <text x="112" y="690" class="e-desc">Agent-written state &amp; rules compiled into renderer controls · 2026</text>
+  <circle cx="96" cy="715" r="3.5" fill="#7c3aed"/>
+  <text x="112" y="720" class="e-name">Code World Model</text>
+  <text x="112" y="740" class="e-desc">Continual code state conditioning MiniMax-H3 video · 2026</text>
+  <circle cx="96" cy="765" r="3.5" fill="#7c3aed"/>
+  <text x="112" y="770" class="e-name">Code as Worlds</text>
+  <text x="112" y="790" class="e-desc">Propose–execute–render–verify discovery loop · 2026</text>
+  <circle cx="96" cy="815" r="3.5" fill="#7c3aed"/>
+  <text x="112" y="820" class="e-name">VisPhyWorld</text>
+  <text x="112" y="840" class="e-desc">Physics simulation code inferred from visual evidence · 2026</text>
+  <circle cx="96" cy="865" r="3.5" fill="#7c3aed"/>
+  <text x="112" y="870" class="e-name">CoDeR</text>
+  <text x="112" y="890" class="e-desc">Five-role code planning with diffusion rendering · 2026</text>
 
-  <rect x="1100" y="258" width="400" height="100" rx="18" fill="#f8fafc" stroke="#64748b" stroke-width="2.5" filter="url(#shadow)"/>
-  <rect x="1126" y="279" width="132" height="25" rx="12.5" fill="#64748b"/>
-  <text x="1192" y="297" text-anchor="middle" class="chip" fill="#ffffff">SECONDARY</text>
-  <text x="1126" y="326" class="branch-title">SOFTWARE WORLDS</text>
-  <text x="1126" y="349" class="branch-subtitle">Code is the modeled world</text>
+  <!-- 03 Explicit-State Models & Renderers -->
+  <rect x="60" y="926" width="580" height="316" rx="18" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="76" y="942" width="411" height="40" rx="20" fill="#2563eb"/>
+  <circle cx="98" cy="962" r="13" fill="#ffffff"/>
+  <text x="98" y="967" text-anchor="middle" class="pill-num" fill="#2563eb">03</text>
+  <text x="120" y="968" class="pill-txt">Explicit-State Models &amp; Renderers</text>
+  <text x="92" y="1012" class="c-sub">Explicit state and dynamics, separated from visual realization</text>
+  <line x1="92" y1="1026" x2="548" y2="1026" stroke="#bfdbfe"/>
+  <circle cx="96" cy="1051" r="3.5" fill="#2563eb"/>
+  <text x="112" y="1056" class="e-name">Magpie</text>
+  <text x="112" y="1076" class="e-desc">Engine-owned state with real-time neural render server · 2026</text>
+  <circle cx="96" cy="1101" r="3.5" fill="#2563eb"/>
+  <text x="112" y="1106" class="e-name">Marionette</text>
+  <text x="112" y="1126" class="e-desc">Explicit 3D pose state; diffusion paints appearance · 2026</text>
+  <circle cx="96" cy="1151" r="3.5" fill="#2563eb"/>
+  <text x="112" y="1156" class="e-name">MASS</text>
+  <text x="112" y="1176" class="e-desc">Authoritative shared state, per-player neural views · 2026</text>
+  <circle cx="96" cy="1201" r="3.5" fill="#2563eb"/>
+  <text x="112" y="1206" class="e-name">StatePlay</text>
+  <text x="112" y="1226" class="e-desc">Mechanics-consistent explicit game variables · 2026</text>
 
-  <!-- External-world branch connectors -->
-  <path d="M550 358 V406 H210 V438" class="connector"/>
-  <path d="M550 358 V406 H580 V438" class="connector"/>
-  <path d="M550 358 V406 H950 V438" class="connector"/>
-  <path d="M1300 358 V438" class="connector"/>
+  <!-- 02 World Models as Executable Programs -->
+  <rect x="665" y="200" width="580" height="616" rx="18" fill="#fffbeb" stroke="#d97706" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="681" y="216" width="432" height="40" rx="20" fill="#d97706"/>
+  <circle cx="703" cy="236" r="13" fill="#ffffff"/>
+  <text x="703" y="241" text-anchor="middle" class="pill-num" fill="#d97706">02</text>
+  <text x="725" y="242" class="pill-txt">World Models as Executable Programs</text>
+  <text x="697" y="286" class="c-sub">Transition models induced, synthesized, or repaired as programs</text>
+  <line x1="697" y1="300" x2="1153" y2="300" stroke="#fde68a"/>
+  <circle cx="701" cy="325" r="3.5" fill="#d97706"/>
+  <text x="717" y="330" class="e-name">VisualPatchWorld</text>
+  <text x="717" y="350" class="e-desc">Latent structured code dynamics for planning · 2026</text>
+  <circle cx="701" cy="375" r="3.5" fill="#d97706"/>
+  <text x="717" y="380" class="e-name">Mind-Studio</text>
+  <text x="717" y="400" class="e-desc">Executable game models with lookahead evaluation · 2026</text>
+  <circle cx="701" cy="425" r="3.5" fill="#d97706"/>
+  <text x="717" y="430" class="e-name">Executable WMs for ARC-AGI-3</text>
+  <text x="717" y="450" class="e-desc">Persistent Python models of interactive games · 2026</text>
+  <circle cx="701" cy="475" r="3.5" fill="#d97706"/>
+  <text x="717" y="480" class="e-name">PatchWorld</text>
+  <text x="717" y="500" class="e-desc">Gradient-free repair of belief-state programs · 2026</text>
+  <circle cx="701" cy="525" r="3.5" fill="#d97706"/>
+  <text x="717" y="530" class="e-name">Code WMs for General Game Playing</text>
+  <text x="717" y="550" class="e-desc">Rules compiled to Python, planned with MCTS · ICLR 2026</text>
+  <circle cx="701" cy="575" r="3.5" fill="#d97706"/>
+  <text x="717" y="580" class="e-name">PoE-World</text>
+  <text x="717" y="600" class="e-desc">Product of LLM-synthesized programmatic experts · NeurIPS 2025</text>
+  <circle cx="701" cy="625" r="3.5" fill="#d97706"/>
+  <text x="717" y="630" class="e-name">POMDP Coder</text>
+  <text x="717" y="650" class="e-desc">Probabilistic program induction for POMDPs · 2025</text>
+  <circle cx="701" cy="675" r="3.5" fill="#d97706"/>
+  <text x="717" y="680" class="e-name">FactorSim</text>
+  <text x="717" y="700" class="e-desc">Factorized POMDP simulations from language · NeurIPS 2024</text>
+  <circle cx="701" cy="725" r="3.5" fill="#d97706"/>
+  <text x="717" y="730" class="e-name">GIF-MCTS</text>
+  <text x="717" y="750" class="e-desc">MCTS-guided search over simulator programs · NeurIPS 2024</text>
+  <circle cx="701" cy="775" r="3.5" fill="#d97706"/>
+  <text x="717" y="780" class="e-name">WorldCoder</text>
+  <text x="717" y="800" class="e-desc">Building world models by writing code · NeurIPS 2024</text>
 
-  <!-- Programmatic visual card -->
-  <rect x="40" y="438" width="340" height="260" rx="18" fill="#faf5ff" stroke="#7c3aed" stroke-width="2.5" filter="url(#shadow)"/>
-  <circle cx="72" cy="474" r="17" fill="#7c3aed"/>
-  <text x="72" y="480" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#ffffff">1</text>
-  <text x="101" y="480" class="card-title" fill="#6d28d9">Programmatic Visual CWMs</text>
-  <text x="66" y="512" class="card-subtitle">Executable state + controls + neural rendering</text>
-  <line x1="66" y1="530" x2="354" y2="530" stroke="#ddd6fe"/>
-  <text x="66" y="557" class="item">- Programmable World Model</text>
-  <text x="66" y="584" class="item">- Code World Model: World Brain</text>
-  <text x="66" y="611" class="item">- Code as Worlds</text>
-  <text x="66" y="638" class="item">- VisPhyWorld</text>
-  <text x="66" y="665" class="item">- CoDeR</text>
+  <!-- 05 Benchmarks -->
+  <rect x="665" y="836" width="580" height="392" rx="18" fill="#ecfdf5" stroke="#059669" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="681" y="852" width="169" height="40" rx="20" fill="#059669"/>
+  <circle cx="703" cy="872" r="13" fill="#ffffff"/>
+  <text x="703" y="877" text-anchor="middle" class="pill-num" fill="#059669">05</text>
+  <text x="725" y="878" class="pill-txt">Benchmarks</text>
+  <text x="697" y="922" class="c-sub">Direct tests of executable-model fidelity and state persistence</text>
+  <line x1="697" y1="936" x2="1153" y2="936" stroke="#a7f3d0"/>
+  <circle cx="701" cy="961" r="3.5" fill="#059669"/>
+  <text x="717" y="966" class="e-name">CombatStateBench</text>
+  <text x="717" y="986" class="e-desc">Long-horizon entity counts and persistent off-screen state · 2026</text>
+  <circle cx="701" cy="1011" r="3.5" fill="#059669"/>
+  <text x="717" y="1016" class="e-name">VisPhyBench</text>
+  <text x="717" y="1036" class="e-desc">209 scenes from 108 physical templates for re-simulation · 2026</text>
+  <circle cx="701" cy="1061" r="3.5" fill="#059669"/>
+  <text x="717" y="1066" class="e-name">CWMB</text>
+  <text x="717" y="1086" class="e-desc">18 environments for induced transition-model fidelity · 2024</text>
+  <circle cx="701" cy="1111" r="3.5" fill="#059669"/>
+  <text x="717" y="1116" class="e-name">Text2World</text>
+  <text x="717" y="1136" class="e-desc">Natural-language descriptions to executable PDDL models · ACL 2025</text>
+  <text x="697" y="1180" class="sg" fill="#047857">SOFTWARE-EXECUTION BENCHMARKS</text>
+  <text x="697" y="1206" class="ol">SURGE · CRUXEval · R-Eval · CoRE · CES · PLSemanticsBench …</text>
 
-  <!-- Executable program card -->
-  <rect x="410" y="438" width="340" height="232" rx="18" fill="#fff7ed" stroke="#d97706" stroke-width="2.5" filter="url(#shadow)"/>
-  <circle cx="442" cy="474" r="17" fill="#d97706"/>
-  <text x="442" y="480" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#ffffff">2</text>
-  <text x="471" y="480" class="card-title" fill="#b45309">World Models as Programs</text>
-  <text x="436" y="512" class="card-subtitle">Induced or generated executable dynamics</text>
-  <line x1="436" y1="530" x2="724" y2="530" stroke="#fed7aa"/>
-  <text x="436" y="557" class="item">- WorldCoder | GIF-MCTS | FactorSim</text>
-  <text x="436" y="584" class="item">- PoE-World | POMDP Coder</text>
-  <text x="436" y="611" class="item">- PatchWorld | Mind-Studio</text>
-  <text x="436" y="638" class="item">- VisualPatchWorld | ARC-AGI-3</text>
+  <!-- 04 Software World Models -->
+  <rect x="1270" y="200" width="580" height="620" rx="18" fill="#f8fafc" stroke="#64748b" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="1286" y="216" width="285" height="40" rx="20" fill="#64748b"/>
+  <circle cx="1308" cy="236" r="13" fill="#ffffff"/>
+  <text x="1308" y="241" text-anchor="middle" class="pill-num" fill="#64748b">04</text>
+  <text x="1330" y="242" class="pill-txt">Software World Models</text>
+  <text x="1302" y="286" class="c-sub">Code is the modeled world: predicting software execution</text>
+  <line x1="1302" y1="300" x2="1818" y2="300" stroke="#e2e8f0"/>
+  <text x="1302" y="328" class="sg" fill="#475569">REPOSITORY &amp; TERMINAL</text>
+  <circle cx="1306" cy="350" r="3.5" fill="#64748b"/>
+  <text x="1322" y="354" class="ol"><tspan class="ol-name">Qwen-AgentWorld</tspan> — next-observation model across seven agent envs · 2026</text>
+  <circle cx="1306" cy="379" r="3.5" fill="#64748b"/>
+  <text x="1322" y="383" class="ol"><tspan class="ol-name">ECHO</tspan> — terminal agents learn observation prediction for free · 2026</text>
+  <circle cx="1306" cy="408" r="3.5" fill="#64748b"/>
+  <text x="1322" y="412" class="ol"><tspan class="ol-name">SWE-World</tspan> — Docker-free learned repo transitions &amp; rewards · 2026</text>
+  <circle cx="1306" cy="437" r="3.5" fill="#64748b"/>
+  <text x="1322" y="441" class="ol"><tspan class="ol-name">CWM</tspan> — 32B LLM mid-trained on Python execution traces · 2025</text>
+  <text x="1302" y="475" class="sg" fill="#475569">PROGRAM EXECUTION &amp; STATE</text>
+  <circle cx="1306" cy="497" r="3.5" fill="#64748b"/>
+  <text x="1322" y="501" class="ol"><tspan class="ol-name">Neural Debugger</tspan> — forward/inverse execution with debug actions · 2026</text>
+  <circle cx="1306" cy="526" r="3.5" fill="#64748b"/>
+  <text x="1322" y="530" class="ol"><tspan class="ol-name">Self-Execution Simulation</tspan> — trace SFT + verifiable RL · 2026</text>
+  <circle cx="1306" cy="555" r="3.5" fill="#64748b"/>
+  <text x="1322" y="559" class="ol"><tspan class="ol-name">ExecVerify</tspan> — white-box RL with stepwise rewards · ACL 2026</text>
+  <circle cx="1306" cy="584" r="3.5" fill="#64748b"/>
+  <text x="1322" y="588" class="ol"><tspan class="ol-name">Execution Tuning</tspan> — line-level execution trace training · 2025</text>
+  <circle cx="1306" cy="613" r="3.5" fill="#64748b"/>
+  <text x="1322" y="617" class="ol"><tspan class="ol-name">SemCoder</tspan> — execution-aware semantic reasoning · NeurIPS 2024</text>
+  <circle cx="1306" cy="642" r="3.5" fill="#64748b"/>
+  <text x="1322" y="646" class="ol"><tspan class="ol-name">TRACED</tspan> — execution-aware pre-training · ICSE 2024</text>
+  <circle cx="1306" cy="671" r="3.5" fill="#64748b"/>
+  <text x="1322" y="675" class="ol"><tspan class="ol-name">CodeExecutor</tspan> — line-by-line traces and outputs · ACL 2023</text>
+  <circle cx="1306" cy="700" r="3.5" fill="#64748b"/>
+  <text x="1322" y="704" class="ol"><tspan class="ol-name">Learning to Execute</tspan> — foundational RNN execution study · 2014</text>
+  <text x="1302" y="738" class="sg" fill="#475569">EVALUATION &amp; ANALYSIS</text>
+  <circle cx="1306" cy="760" r="3.5" fill="#64748b"/>
+  <text x="1322" y="764" class="ol"><tspan class="ol-name">Implicit SWM Evaluation</tspan> — library-level cases from SWE-bench · 2026</text>
+  <circle cx="1306" cy="789" r="3.5" fill="#64748b"/>
+  <text x="1322" y="793" class="ol"><tspan class="ol-name">Debugging CWMs</tspan> — action vs. state-propagation failures · 2026</text>
 
-  <!-- Explicit-state bridge card -->
-  <rect x="780" y="438" width="340" height="232" rx="18" fill="#eff6ff" stroke="#2563eb" stroke-width="2.5" filter="url(#shadow)"/>
-  <circle cx="812" cy="474" r="17" fill="#2563eb"/>
-  <text x="812" y="480" text-anchor="middle" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#ffffff">3</text>
-  <text x="841" y="480" class="card-title" fill="#1d4ed8">Explicit-State Bridges</text>
-  <text x="806" y="512" class="card-subtitle">Structured state + generative rendering</text>
-  <line x1="806" y1="530" x2="1094" y2="530" stroke="#bfdbfe"/>
-  <text x="806" y="557" class="item">- Magpie</text>
-  <text x="806" y="584" class="item">- Marionette</text>
-  <text x="806" y="611" class="item">- MASS</text>
-  <text x="806" y="638" class="item">- StatePlay</text>
+  <!-- 06 Adjacent Neural Visual Models -->
+  <rect x="1270" y="840" width="580" height="258" rx="18" fill="#fdf2f8" stroke="#db2777" stroke-width="1.5" stroke-dasharray="10 7"/>
+  <rect x="1286" y="856" width="369" height="40" rx="20" fill="#db2777"/>
+  <circle cx="1308" cy="876" r="13" fill="#ffffff"/>
+  <text x="1308" y="881" text-anchor="middle" class="pill-num" fill="#db2777">06</text>
+  <text x="1330" y="882" class="pill-txt">Adjacent Neural Visual Models</text>
+  <text x="1302" y="926" class="c-sub">Rendering and action-conditioning context — no executable state</text>
+  <line x1="1302" y1="940" x2="1818" y2="940" stroke="#f9a8d4"/>
+  <circle cx="1306" cy="964" r="3.5" fill="#db2777"/>
+  <text x="1322" y="968" class="ol"><tspan class="ol-name">YUME</tspan> — interactive world generation · 2025</text>
+  <circle cx="1306" cy="993" r="3.5" fill="#db2777"/>
+  <text x="1322" y="997" class="ol"><tspan class="ol-name">GameNGen</tspan> — diffusion as a real-time game engine · 2024</text>
+  <circle cx="1306" cy="1022" r="3.5" fill="#db2777"/>
+  <text x="1322" y="1026" class="ol"><tspan class="ol-name">DIAMOND</tspan> — diffusion world modeling in Atari · NeurIPS 2024</text>
+  <circle cx="1306" cy="1051" r="3.5" fill="#db2777"/>
+  <text x="1322" y="1055" class="ol"><tspan class="ol-name">Genie</tspan> — generative interactive environments · ICML 2024</text>
+  <text x="1302" y="1081" class="note" fill="#be185d">Kept as context — not Code World Models.</text>
 
-  <!-- Software-world card -->
-  <rect x="1160" y="438" width="400" height="360" rx="18" fill="#f8fafc" stroke="#64748b" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="1190" y="480" class="card-title" fill="#334155">Learned Software-Environment Models</text>
-  <text x="1190" y="510" class="card-subtitle">Predict execution, tools, repositories, and tests</text>
-  <line x1="1190" y1="530" x2="1530" y2="530" stroke="#cbd5e1"/>
+  <!-- The Boundary -->
+  <rect x="1270" y="1118" width="580" height="124" rx="18" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="1302" y="1150" class="sg" fill="#64748b">THE BOUNDARY</text>
+  <text x="1302" y="1176" class="c-sub">Representation, not appearance: simple visuals qualify when dynamics are</text>
+  <text x="1302" y="1200" class="c-sub">executable; photorealistic video is adjacent when state stays implicit.</text>
 
-  <rect x="1190" y="550" width="340" height="61" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
-  <text x="1207" y="574" class="small">REPOSITORY &amp; TERMINAL</text>
-  <text x="1207" y="597" class="item">CWM | SWE-World | Qwen-AgentWorld | ECHO</text>
-
-  <rect x="1190" y="625" width="340" height="61" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
-  <text x="1207" y="649" class="small">PROGRAM EXECUTION</text>
-  <text x="1207" y="672" class="item">Neural Debugger | ExecVerify | CodeExecutor</text>
-
-  <rect x="1190" y="700" width="340" height="70" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
-  <text x="1207" y="724" class="small">EVALUATION &amp; BENCHMARKS</text>
-  <text x="1207" y="747" class="item">SURGE | CRUXEval | R-Eval | CoRE</text>
-
-  <!-- Context and benchmark cards -->
-  <rect x="40" y="742" width="500" height="150" rx="18" fill="#fdf2f8" stroke="#db2777" stroke-width="2.5" stroke-dasharray="10 8" opacity="0.9"/>
-  <rect x="64" y="760" width="140" height="24" rx="12" fill="#db2777"/>
-  <text x="134" y="777" text-anchor="middle" class="chip" fill="#ffffff">ADJACENT</text>
-  <text x="64" y="816" class="card-title" fill="#be185d">Neural Visual World Models</text>
-  <text x="64" y="844" class="card-subtitle">Action-conditioned pixels or latents; no executable canonical state</text>
-  <text x="64" y="873" class="item">Genie | GameNGen | DIAMOND | YUME</text>
-
-  <rect x="590" y="742" width="530" height="150" rx="18" fill="#ecfdf5" stroke="#059669" stroke-width="2.5" opacity="0.9"/>
-  <rect x="614" y="760" width="136" height="24" rx="12" fill="#059669"/>
-  <text x="682" y="777" text-anchor="middle" class="chip" fill="#ffffff">SUPPORT</text>
-  <text x="614" y="816" class="card-title" fill="#047857">Programmatic-World Benchmarks</text>
-  <text x="614" y="844" class="card-subtitle">State persistence, simulator fidelity, and executable-model quality</text>
-  <text x="614" y="873" class="item">CombatStateBench | VisPhyBench | CWMB | Text2World</text>
-
-  <!-- Relationship arrows -->
-  <path d="M540 812 H565 Q580 812 580 797 V694 Q580 680 580 670" fill="none" stroke="#059669" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#arrow-green)" opacity="0.8"/>
-  <path d="M290 742 V706 Q290 690 306 690 H930 Q950 690 950 670" fill="none" stroke="#db2777" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#arrow-pink)" opacity="0.8"/>
-
-  <!-- Legend -->
-  <line x1="60" y1="922" x2="100" y2="922" stroke="#334155" stroke-width="3"/>
-  <text x="112" y="927" class="small">core taxonomy</text>
-  <line x1="255" y1="922" x2="295" y2="922" stroke="#db2777" stroke-width="3" stroke-dasharray="7 5"/>
-  <text x="307" y="927" class="small">adjacent influence</text>
-  <line x1="475" y1="922" x2="515" y2="922" stroke="#059669" stroke-width="3" stroke-dasharray="7 5"/>
-  <text x="527" y="927" class="small">benchmark support</text>
+  <!-- Footer -->
+  <text x="60" y="1284" class="footer">Awesome Code World Models — github.com/lxycopper/Awesome-Code-World-Models</text>
+  <text x="1860" y="1284" text-anchor="end" class="footer">Solid border = core taxonomy · Dashed border = adjacent context</text>
 </svg>
