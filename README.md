@@ -40,16 +40,25 @@ Here, $P$ is the executable world program. It may be written by a coding agent, 
 ## Contents
 
 - [Taxonomy at a Glance](#taxonomy-at-a-glance)
+- [How to Compare These Works](#how-to-compare-these-works)
+- [Work Comparison](#work-comparison)
+  - [Programmatic Visual Models](#programmatic-visual-models)
+  - [Explicit-State and Rendering Models](#explicit-state-and-rendering-models)
+  - [Executable Program Models](#executable-program-models)
 - [Programmatic Visual World Models](#programmatic-visual-world-models)
 - [Explicit-State Models and Generative Renderers](#explicit-state-models-and-generative-renderers)
 - [World Models as Executable Programs](#world-models-as-executable-programs)
 - [Programmatic-World Benchmarks](#programmatic-world-benchmarks)
 - [Adjacent Neural Visual World Models](#adjacent-neural-visual-world-models)
 - [Software World Models](#software-world-models)
+  - [Software Model Comparison](#software-model-comparison)
   - [Repository and Terminal World Models](#repository-and-terminal-world-models)
   - [Program Execution and State Models](#program-execution-and-state-models)
   - [Software-World Evaluation and Analysis](#software-world-evaluation-and-analysis)
   - [Software-World Benchmarks](#software-world-benchmarks)
+- [Benchmark Selection Guide](#benchmark-selection-guide)
+- [Reading Paths](#reading-paths)
+- [Research Questions](#research-questions)
 - [Terminology and Scope](#terminology-and-scope)
 - [Contributing](#contributing)
 
@@ -59,7 +68,7 @@ Here, $P$ is the executable world program. It may be written by a coding agent, 
 - ![Agent Written][tag-agent-written] — a coding agent creates or edits world programs
 - ![Induced][tag-induced] — executable dynamics are learned from observations or interaction
 - ![Neural Renderer][tag-neural-renderer] — a generative model realizes visual observations from structured controls
-- ![Explicit State][tag-explicit-state] — dynamics and observations are modeled separately
+- ![Explicit State][tag-explicit-state] — world or game state is explicitly represented alongside observations
 - ![Software World][tag-software-world] — predicts the behavior of programs or software environments
 - ![Transition][tag-transition] / ![Trace][tag-trace] / ![Outcome][tag-outcome] / ![Reward][tag-reward] — software-world prediction targets
 - ![Repository][tag-repo] / ![Terminal][tag-terminal] — repository-scale or command-line software environments
@@ -71,6 +80,61 @@ The poster separates the repository's primary focus—code as the executable rep
 <p align="center">
   <img src="assets/code-world-model-taxonomy.svg" width="100%" alt="Taxonomy of Code World Models, including programmatic visual world models, executable program world models, explicit-state bridges, software world models, benchmarks, and adjacent neural visual models." />
 </p>
+
+## How to Compare These Works
+
+The most useful comparison starts with **what is represented and what is executed**. An executable simulator of an external world, a learned predictor of explicit state, and a language model that predicts software execution serve different roles, even when all three are called world models.
+
+| Dimension | What to look for | Why it matters |
+| --- | --- | --- |
+| Modeled world | Physical scenes, interactive games, or software environments | Establishes which systems address the same problem. |
+| State representation | Program variables, object states, belief states, execution traces, or implicit features | Identifies what can be inspected, edited, and preserved across steps. |
+| Source of dynamics | Authored rules, language specifications, offline trajectories, or online interaction | Distinguishes implementing supplied rules from discovering unknown rules. |
+| Model construction | Program synthesis, search and repair, probabilistic induction, or neural training | Clarifies what changes when new evidence arrives. |
+| Observation generation | Simulator rendering, structured controls plus neural rendering, or predicted tool output | Separates transition correctness from observation quality. |
+| Validation | State fidelity, rollout consistency, planning success, or execution accuracy | Connects the claimed capability to a suitable evaluation. |
+
+For example, [PWM](https://arxiv.org/abs/2609.10540) executes generated rules to maintain a persistent world and then renders it, while [GIF-MCTS](https://arxiv.org/abs/2405.15383) searches for simulator code consistent with descriptions and collected trajectories. These are different sources of dynamics: executability alone does not establish that a model has discovered the world's rules.
+
+## Work Comparison
+
+These tables summarize the external-world methods already listed below. Work names link to primary sources; the original entries retain full titles and resource links. The tables compare system designs, not scores from different evaluation settings. Years follow the citations in the paper list.
+
+### Programmatic Visual Models
+
+| Work | World representation | How dynamics are obtained | Observation / rendering | Main use or evaluation focus |
+| --- | --- | --- | --- | --- |
+| [CoDeR: Code Plans, Diffusion Renders (2026)](https://arxiv.org/abs/2609.26458) | Modular executable 3D worlds with registered appearance | Coding agents implement shared rules and interacting systems | Whitebox video, depth and prompts condition MiniMax-H3 | Persistent memory, open-ended interactions and autonomous multi-agent evolution |
+| [Programmable World Model (2026)](https://arxiv.org/abs/2609.10540) | Persistent entity state with state-augmented 3D boxes | Agent-written transition programs run in a state engine | Deterministically compiled spatial controls condition a video model | CombatStateBench: entity counts and persistent state over long horizons |
+| [Code as Worlds (2026)](https://arxiv.org/abs/2608.27549) | Executable physical composition, evolution and appearance specifications | Agent refines hypotheses from text or video evidence | MuJoCo simulation, followed by neural sim-to-real re-rendering | Physical reconstruction and quantitative reasoning supervision; QuantiPhy |
+| [Coding Agent as World Brain (2026)](https://arxiv.org/abs/2608.25927) | Persistent executable entity states and world rules | Coding agent reasons about events and updates world programs | Compiled proxy videos condition fine-tuned MiniMax-H3 | Rule-consistent interactive worlds with controllable visual realizations |
+| [VisPhyWorld (2026)](https://arxiv.org/abs/2602.13294) | Executable 2D/3D scene and physics hypotheses | Multimodal models infer simulation code from visual keyframes | Simulator rendering, primarily Three.js and p5.js | VisPhyBench: visual reconstruction and physical motion fidelity |
+
+### Explicit-State and Rendering Models
+
+These are related explicit-state systems; the table distinguishes separate state/rendering engines from joint state-and-video prediction.
+
+| Work | World representation | How dynamics are obtained | Observation / rendering | Main use or evaluation focus |
+| --- | --- | --- | --- | --- |
+| [Magpie (2026)](https://arxiv.org/abs/2608.27168) | Game-engine state, scene geometry and authored rules | Conventional engine executes designer-defined mechanics and player actions | Independent generative server renders engine-produced whitebox frames | Real-time interactive game rendering and asset-light prototyping |
+| [Marionette (2026)](https://arxiv.org/abs/2608.14530) | Explicit articulated 3D poses, root trajectories and rotations | Learned two-stage autoregressive state dynamics; optional rule corrections | Fixed geometry bridge produces controls for video diffusion | Action control and long-horizon repair in articulated-character games |
+| [MASS (2026)](https://arxiv.org/abs/2608.06257) | Global typed state shared by all players | Learned logic engine predicts transitions from joint actions | Learned rendering engine produces camera-specific views on demand | Multiplayer Snake: state accuracy, cross-view consistency and scalability |
+| [StatePlay (2026)](https://arxiv.org/abs/2607.26754) | Explicit game variables coupled with visual representations | Jointly learned state and video prediction with interacting branches | Predicted game states guide the visual-generation branch | State prediction and mechanics fidelity in generated gameplay |
+
+### Executable Program Models
+
+| Work | Evidence / input | Executable representation | Construction / update mechanism | Main use |
+| --- | --- | --- | --- | --- |
+| [VisualPatchWorld (2026)](https://arxiv.org/abs/2607.25236) | Active probes and offline structured state–action traces | Python transition programs over structured scene graphs | Select dynamics sketches, then fit multi-step rollout parameters | Model-predictive control with image-based state estimation |
+| [Mind-Studio (2026)](https://arxiv.org/abs/2606.16070) | Logged object-level Atari transitions and scene information | Standalone Python object dynamics and scene rendering | Entropy-based trace selection, compression, and skill-guided LLM synthesis | Lookahead action selection in partially observable Atari |
+| [ARC-AGI-3 executable models (2026)](https://arxiv.org/abs/2605.05138) | Online game observations and recorded action outcomes | Persistent Python dynamics, state reconstruction, and rendering | Coding-agent edits, observation replay verification, and model refactoring | Planning and checking actions in interactive puzzle games |
+| [PatchWorld (2026)](https://arxiv.org/abs/2605.30880) | Offline text observation–action trajectories under partial observability | Python belief state, transitions, correction, and observation readout | Counterexample-guided patches accepted through held-out validation replay | Observation prediction and lookahead for text agents |
+| [General Game Playing CWMs (2026)](https://proceedings.iclr.cc/paper_files/paper/2026/hash/d8a12fde9e72444e1b356e8c37e53753-Abstract-Conference.html) | Natural-language game rules and offline game trajectories | Python game simulator with optional hidden-state inference functions | LLM synthesis and refinement using trajectory-derived unit tests | MCTS for perfect- and imperfect-information game playing |
+| [PoE-World (2025)](https://proceedings.neurips.cc/paper_files/paper/2025/hash/262dd62fd1bbb30d6a6b4d578f5e65ff-Abstract-Conference.html) | Brief object-level demonstrations followed by online interaction | Weighted product of Python experts predicting observation distributions | Synthesize experts, fit weights, and prune after new observations | Planning and policy learning in partially observable Atari |
+| [POMDP Coder (2025)](https://arxiv.org/abs/2505.02216) | Demonstrations and interaction; states revealed after episodes | Probabilistic initial-state, transition, observation, and reward programs | LLM proposals and coverage-guided repair between episodes | Belief-space planning in games and robot search |
+| [FactorSim (2024)](https://proceedings.neurips.cc/paper_files/paper/2024/hash/9f35ec2f7f403ef2c83d65b581df10bc-Abstract-Conference.html) | Natural-language task descriptions or environment documentation | Complete simulation code organized as a factored POMDP | Decompose requirements and generate modules with selected state context | Train policies in generated game and robotics simulations |
+| [GIF-MCTS (2024)](https://arxiv.org/abs/2405.15383) | Natural-language environment descriptions and collected offline trajectories | Python simulator predicting next state, reward, and termination | Search generate, improve, and fix actions using transition tests | Model-based planning across discrete and continuous control tasks |
+| [WorldCoder (2024)](https://proceedings.neurips.cc/paper_files/paper/2024/hash/820c61a0cd419163ccbd2c33b268816e-Abstract-Conference.html) | State transitions and rewards collected through online interaction | Python programs for state transitions and rewards | Synthesize and repair models under experience and optimism constraints | Exploration and planning in gridworlds and household tasks |
 
 ## Programmatic Visual World Models
 
@@ -103,9 +167,9 @@ These works most directly match this repository's primary focus: executable prog
   <details>
   <summary>TL;DR</summary>
 
-  Represents physical composition, dynamics, and appearance as executable code, discovered through a propose–execute–render–verify loop from text or video evidence.
+  Represents physical composition, dynamics, and appearance as executable code, discovered through a propose–execute–render–verify loop from text or video evidence; simulated videos can then be re-rendered by a neural video model.
 
-  ![Code State][tag-code-state] ![Agent Written][tag-agent-written] ![Induced][tag-induced]
+  ![Code State][tag-code-state] ![Agent Written][tag-agent-written] ![Induced][tag-induced] ![Neural Renderer][tag-neural-renderer]
 
   </details>
 
@@ -114,7 +178,7 @@ These works most directly match this repository's primary focus: executable prog
   <details>
   <summary>TL;DR</summary>
 
-  Requires multimodal models to infer executable 2D/3D physics simulation code from visual evidence and evaluates the re-rendered future, making the inferred dynamics inspectable and falsifiable.
+  Requires multimodal models to infer executable 2D/3D physics simulation code from visual keyframes and evaluates reconstructed appearance and physical motion, making the inferred dynamics inspectable and falsifiable.
 
   ![Code State][tag-code-state] ![Agent Written][tag-agent-written] ![Induced][tag-induced]
 
@@ -133,7 +197,7 @@ These works most directly match this repository's primary focus: executable prog
 
 ## Explicit-State Models and Generative Renderers
 
-These systems share the key separation between authoritative state/dynamics and visual realization, but their state transitions are learned or conventionally authored rather than maintained as open-ended code by an agent.
+These systems expose explicit world or game state alongside neural visual generation. Dynamics may be learned or conventionally authored, and the coupling ranges from separate state/rendering engines to joint state-and-video prediction.
 
 - <div><strong>Magpie: Real-Time World Renderer for Interactive Games</strong>. arXiv 2026.<br>
   <a href="https://arxiv.org/abs/2608.27168"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a> <a href="https://zhanxy.xyz/Magpie-website"><img src="https://img.shields.io/badge/Website-Link-2563EB" alt="Website"></a> <a href="https://huggingface.co/datasets/MogoAI/Magpie_lite"><img src="https://img.shields.io/badge/Data-Dataset-F59E0B" alt="Data"></a></div>
@@ -188,7 +252,7 @@ These works learn, synthesize, or repair executable transition models for planni
   <details>
   <summary>TL;DR</summary>
 
-  Induces structured executable dynamics from visual trajectories for planning across navigation and continuous-control tasks.
+  Selects executable dynamics sketches through active probes and fits their parameters from offline structured state–action traces; image-derived scene graphs supply live state for model-predictive control.
 
   ![Induced][tag-induced]
 
@@ -216,7 +280,7 @@ These works learn, synthesize, or repair executable transition models for planni
 
   </details>
 
-- <div><strong>PatchWorld: Gradient-Free Optimization of Executable World Models</strong>. arXiv 2026.<br>
+- <div><strong>PatchWorld: Gradient-Free Optimization of Executable World Models for Agent Environments</strong>. arXiv 2026.<br>
   <a href="https://arxiv.org/abs/2605.30880"><img src="https://img.shields.io/badge/arXiv-Paper-B31B1B?logo=arxiv&logoColor=white" alt="arXiv"></a> <a href="https://github.com/HKBU-KnowComp/PatchWorld"><img src="https://img.shields.io/badge/Code-GitHub-2DA44E?logo=github&logoColor=white" alt="Code"></a></div>
   <details>
   <summary>TL;DR</summary>
@@ -276,7 +340,7 @@ These works learn, synthesize, or repair executable transition models for planni
   <details>
   <summary>TL;DR</summary>
 
-  Searches over executable simulator programs using environment interaction and downstream policy performance, and introduces the Code World Models Benchmark (CWMB).
+  Uses Monte Carlo tree search to generate, improve, and fix Python simulator programs against natural-language descriptions and offline trajectory tests, then evaluates them through model-based planning; introduces the Code World Models Benchmark (CWMB).
 
   ![Agent Written][tag-agent-written] ![Induced][tag-induced]
 
@@ -312,6 +376,25 @@ These representative interactive video world models provide important rendering 
 ## Software World Models
 
 This second direction uses “Code World Model” to mean a learned model of **software execution**: how code, commands, tools, repositories, and tests change a computational environment. Here, code is the modeled world rather than the representation of an external world.
+
+### Software Model Comparison
+
+Here, a learned model predicts the effects of executing code or taking software actions. Predicting a trace or tool response is a different capability from constructing an executable simulator of an external world. The table covers the model papers below; evaluation and analysis resources remain in their own sections.
+
+| Work | Modeled environment | Prediction target | Training signal / use |
+| --- | --- | --- | --- |
+| [Qwen-AgentWorld (2026)](https://arxiv.org/abs/2606.24597) | Agent environments, including terminal and software-engineering domains | Next observations following agent actions | Interaction trajectories; pretraining, SFT and RL for agent simulation |
+| [ECHO (2026)](https://arxiv.org/abs/2605.24517) | Command-line environments encountered during agent rollouts | Environment-response tokens produced by the policy's actions | Auxiliary observation-prediction loss alongside policy-gradient training |
+| [SWE-World (2026)](https://arxiv.org/abs/2602.03419) | Repository-level software-engineering environments | Intermediate command outcomes and final test feedback | Real interaction data; surrogate agent training and solution selection |
+| [Meta CWM (2025)](https://arxiv.org/abs/2510.02387) | Python interpreter and agentic Docker environments | Python execution states and software-environment responses | Trajectory mid-training and reasoning RL for coding tasks |
+| [ExecVerify (2026)](https://aclanthology.org/2026.acl-long.631/) | Synthesized programs and code-execution reasoning tasks | Next statement, variable values/types and final outputs | Verifiable stepwise RL rewards; transfer to code generation |
+| [Self-Execution Simulation (2026)](https://arxiv.org/abs/2604.03253) | Competitive-programming solutions evaluated on test inputs | Execution explanations and predicted test outputs | Execution-grounded SFT and verifiable RL; self-verification and repair |
+| [Towards a Neural Debugger for Python (2026)](https://arxiv.org/abs/2603.09951) | Python execution controlled by debugger actions | Forward states/outputs and inverse prior states/inputs | Debugger-conditioned training; controllable execution reasoning |
+| [Execution Tuning (2025)](https://arxiv.org/abs/2503.05703) | Real-world program execution at multiple granularities | Line/instruction-level traces and program outputs | Execution-trace training; dynamic scratchpads for long execution |
+| [SemCoder (2024)](https://proceedings.neurips.cc/paper_files/paper/2024/hash/6efcc7fd8efeee29a050a79c843c90e0-Abstract-Conference.html) | Python programs with descriptions and test cases | Semantic monologues about execution effects and input/output behavior | Natural-language semantics training; code generation, reasoning and repair |
+| [TRACED (2024)](https://arxiv.org/abs/2306.07487) | C programs paired with executable inputs | Execution coverage and quantized runtime variable states | Trace-aware pretraining; execution estimation, clone retrieval and vulnerability detection |
+| [CodeExecutor (2023)](https://aclanthology.org/2023.findings-acl.308/) | Python programs with mutation-augmented execution data | Line-by-line execution traces and final outputs | Execution pretraining and curriculum learning; code-intelligence transfer |
+| [Learning to Execute (2014)](https://arxiv.org/abs/1410.4615) | Short synthetic programs with restricted computational structure | Program outputs directly from character-level source | Supervised LSTM training with a tailored curriculum |
 
 ### Repository and Terminal World Models
 
@@ -410,9 +493,9 @@ This second direction uses “Code World Model” to mean a learned model of **s
   <details>
   <summary>TL;DR</summary>
 
-  Learns execution-aware semantic traces and execution monologues for generation and repair.
+  Learns natural-language monologues about functional behavior, local execution effects, and input/output semantics for code generation and repair.
 
-  ![Trace][tag-trace] ![Outcome][tag-outcome]
+  ![Outcome][tag-outcome]
 
   </details>
 
@@ -421,7 +504,7 @@ This second direction uses “Code World Model” to mean a learned model of **s
   <details>
   <summary>TL;DR</summary>
 
-  Predicts execution coverage and quantized runtime variable states from source code and inputs.
+  Predicts execution coverage and quantized runtime variable states from C source code and inputs.
 
   ![Trace][tag-trace] ![Outcome][tag-outcome]
 
@@ -490,6 +573,52 @@ Benchmarks are listed here only when they directly test learned execution or sof
   - **CRUXEval** — Input and output prediction for short Python functions. [![Paper][res-paper]](https://proceedings.mlr.press/v235/gu24c.html) [![Code and Data][res-code-data]](https://github.com/facebookresearch/cruxeval)
   - **Code Simulation Challenges** — Tests straight-line execution, critical paths, redundant computation, loops, and sorting. [![arXiv][res-arxiv]](https://arxiv.org/abs/2401.09074) [![Code and Data][res-code-data]](https://github.com/EmanueleLM/CodeSimulation)
 
+## Benchmark Selection Guide
+
+Choose a benchmark by the capability being tested. The capability groups below are a reading aid for the benchmarks already collected in this repository; no single benchmark covers all aspects of a world model.
+
+### External Worlds
+
+| Capability | Benchmark | Task / evidence to inspect |
+| --- | --- | --- |
+| Persistent visual state | [CombatStateBench](https://arxiv.org/abs/2609.10540) | Entity counts and state accuracy across camera motion, occlusion, and irreversible events. |
+| Physical reconstruction | [VisPhyBench](https://arxiv.org/abs/2602.13294) | Generate simulator code from visual evidence; assess reconstructed appearance and motion. |
+| Executable dynamics for planning | [CWMB](https://arxiv.org/abs/2405.15383) | Synthesize simulators from descriptions and trajectories; evaluate model fidelity and planning. |
+| Symbolic rule generation | [Text2World](https://aclanthology.org/2025.findings-acl.1337/) | Generate PDDL world models from text; assess them through execution-based criteria. |
+
+### Software Environments
+
+| Capability | Benchmark(s) | Task / evidence to inspect |
+| --- | --- | --- |
+| Tool and environment transitions | [AgentWorldBench](https://huggingface.co/datasets/Qwen/AgentWorldBench), Terminal / SWE subsets | Predict observations after shell commands or repository actions against real execution feedback. |
+| Input / output reasoning | [CRUXEval](https://proceedings.mlr.press/v235/gu24c.html), [DexBench](https://aclanthology.org/2026.acl-long.735/) | Infer function inputs or outputs; DexBench additionally tests input mutations toward behavioral goals. |
+| Intermediate execution behavior | [R-Eval](https://arxiv.org/abs/2403.16437), [CoRE](https://aclanthology.org/2026.findings-acl.460/) | Inspect execution paths and intermediate states; test consistency beyond final outputs. |
+| Reasoning under controlled changes | [CES](https://arxiv.org/abs/2510.15079), [PLSemanticsBench](https://arxiv.org/abs/2510.03415) | CES tests trace coherence across inputs; PLSemanticsBench tests adherence to supplied and altered semantics. |
+| Broader execution settings | [SURGE](https://aclanthology.org/2025.emnlp-main.162/), [Code Simulation Challenges](https://arxiv.org/abs/2401.09074) | SURGE spans languages and execution environments; Code Simulation Challenges varies computational structures. |
+| Exceptions and resource behavior | [ThrowBench](https://arxiv.org/abs/2503.04241), [BigO(Bench)](https://arxiv.org/abs/2503.15242) | Predict runtime exceptions or time and space complexity, respectively. |
+
+**When comparing results**, check the available inputs, access to a real environment or executor, rollout horizon, evaluation split, and model-construction budget. For visual models, inspect state correctness and rendered appearance separately. For planning models, examine model fidelity alongside downstream success. For software models, distinguish final-output accuracy from faithful intermediate execution.
+
+## Reading Paths
+
+These suggested paths connect complementary design choices; arrows indicate reading order, not a claim of direct technical lineage.
+
+- **Persistent visual worlds:** [PWM](https://arxiv.org/abs/2609.10540) → [Coding Agent as World Brain](https://arxiv.org/abs/2608.25927) → [Magpie](https://arxiv.org/abs/2608.27168). Compare agent-written dynamics with a conventional engine driving a neural renderer.
+- **Learning simulators for planning:** [WorldCoder](https://proceedings.neurips.cc/paper_files/paper/2024/hash/820c61a0cd419163ccbd2c33b268816e-Abstract-Conference.html) → [GIF-MCTS](https://arxiv.org/abs/2405.15383) → [PoE-World](https://proceedings.neurips.cc/paper_files/paper/2025/hash/262dd62fd1bbb30d6a6b4d578f5e65ff-Abstract-Conference.html). Compare interaction-driven induction, program search, and compositional stochastic dynamics.
+- **Inferring executable physics:** [VisPhyWorld](https://arxiv.org/abs/2602.13294) → [Code as Worlds](https://arxiv.org/abs/2608.27549). Examine how visual evidence constrains simulator code and how execution makes hypotheses testable.
+- **Software execution as the modeled world:** [CodeExecutor](https://aclanthology.org/2023.findings-acl.308/) → [Meta CWM](https://arxiv.org/abs/2510.02387) → [SWE-World](https://arxiv.org/abs/2602.03419). Move from program traces to repository interaction and learned environment feedback.
+
+## Research Questions
+
+The following questions are our synthesis of the design space, intended to guide discussion and future additions rather than to assert that every listed method has the same limitations.
+
+- **Learning versus specifying rules:** How much of a world's dynamics comes from observed evidence, and how much is supplied in prompts, libraries, or a simulator? Can the model identify rules when these sources are incomplete or conflict?
+- **Partial observability and uncertainty:** How should executable models represent hidden state, multiple plausible explanations, and stochastic events while remaining useful for planning?
+- **State-to-image consistency:** How can we test that a neural renderer obeys the executable state through occlusion, camera changes, and long interactions? Can visual feedback reveal and repair mismatches?
+- **Continual program revision:** When new evidence requires a code change, how can the model preserve accumulated state and previously correct behavior? What regression checks should accompany a repair?
+- **Compositional generalization:** Can learned entities and rules be reused in unfamiliar combinations, rather than only replaying the scenes or trajectories used to construct the model?
+- **Quality and cost together:** What is the full cost of constructing, verifying, updating, and rolling out a model? How do planning quality and fidelity change under matched interaction and compute budgets?
+
 ## Terminology and Scope
 
 “Code World Model” currently refers to several related but distinct ideas:
@@ -507,7 +636,8 @@ Contributions are welcome. Before opening a pull request, please check that the 
 1. Uses executable code or another programmatic representation as a world model, couples explicit state to a generative renderer, **or** clearly belongs to the separately labeled software-world direction.
 2. Does more than generate code: the program must represent, advance, reconstruct, evaluate, or support planning in a world.
 3. Links to a canonical paper/project page and, when available, public code, data, and model weights.
-4. Includes one sentence explaining the represented world, how its state evolves, and how observations are rendered.
+4. Includes one sentence explaining the represented world, how state evolves or is predicted, and how observations or feedback are produced.
+5. Updates the matching comparison table for a model entry, or the benchmark selection guide for a benchmark entry. Keep table claims grounded in the linked primary source; use “Not reported” when a relevant detail is unavailable.
 
 Please keep entries reverse chronological within each section and prefer archival conference pages over secondary summaries.
 
